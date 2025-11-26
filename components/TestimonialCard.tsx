@@ -39,7 +39,7 @@ export default function TestimonialCard({
 				className="text-primaryYellow/50 mb-3"
 			/>
 			<p className="paragraph text-darkBlue mb-4 italic">
-				"{text}"
+				&ldquo;{text}&rdquo;
 			</p>
 			<div className="flex items-center justify-between">
 				<div>

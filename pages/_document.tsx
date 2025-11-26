@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Gestalty - Cognitive Precision Learning Platform for Competitive Exams</title>
         <meta
           name="description"
           content="A science-driven learning platform revolutionizing competitive exam preparation (NEET, UPSC, State PSC, JEE) through cognitive psychology, data analytics, and expert mentorship. The only exam prep platform that puts you in the top 5% of successful aspirants."
