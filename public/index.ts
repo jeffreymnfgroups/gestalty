@@ -1,6 +1,6 @@
 export { default as eyes } from './eyes.svg';
 export { default as logo } from './logo.svg';
-export { default as mobileLogo } from './mobile-logo.png';
+export { default as mobileLogo } from './GestaltyFinal.svg';
 export { default as awwwards } from './awwwards.svg';
 export { default as aboutImg } from './aboutImg.webp';
 export { default as videoImg } from './videoImg.jpeg';
@@ -85,3 +85,8 @@ export { default as lexus } from './lexus.svg';
 export { default as aflorihtmic } from './aflomatric.svg';
 export { default as orderlion } from './orderlion.svg';
 export { default as blackBox } from './blackBox.svg';
+
+// exam logos
+export { default as JEE } from './JEE.png';
+export { default as NTA } from './NTA_logo.png';
+export { default as UPSC } from './upsc.png';

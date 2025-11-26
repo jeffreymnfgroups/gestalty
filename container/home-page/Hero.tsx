@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { heroAnimations } from "@/animation";
 import {
-	DashboardPreview,
+	// DashboardPreview,
 	SocialProofTicker,
 } from "@/components";
 
 export default function Hero() {
 	return (
-		<section className="w-full bg-offWhite relative pt-20 sm:pt-22 pb-16 sm:pb-20">
+		<section className="w-full bg-offWhite relative pt-20 sm:pt-22 pb-24 sm:pb-28 lg:pb-32">
 			<div className="w-full padding-x py-6 sm:py-7">
 				<div className="max-w-[1600px] mx-auto">
 					{/* Rounded Corner Card - Minimal Design */}
@@ -136,9 +136,9 @@ export default function Hero() {
 								{/* Right Side - 40% */}
 								<motion.div
 									className="flex-1 lg:w-[40%] flex items-center justify-center z-10 sm:mt-8 xm:mt-8 hidden sm:flex">
-									<div className="w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px]">
-										<DashboardPreview />
-									</div>
+									{/* <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px]"> */}
+										{/* <DashboardPreview /> */}
+									{/* </div> */}
 								</motion.div>
 							</div>
 

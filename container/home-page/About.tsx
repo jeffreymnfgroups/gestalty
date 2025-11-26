@@ -10,7 +10,7 @@ export default function About() {
 	const [hovered, setHovered] = useState(false);
 
 	return (
-		<section className="w-full bg-beige/20 padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
+		<section className="w-full bg-offWhite padding-y relative">
 			<div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
 				<h2 className="sub-heading font-medium font-NeueMontreal text-darkBlue">
 					Gestalty is an advanced exam preparation platform for&nbsp;

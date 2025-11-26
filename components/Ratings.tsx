@@ -18,7 +18,7 @@ export default function Ratings() {
 						<Link
 							className="xl:text-[18px] xl:leading-[18px] text-[14px] leading-[14px] text-about uppercase font-normal font-NeueMontreal tracking-wider"
 							href={"/"}>
-							&copy;2019 - 2024
+							&copy;2019 - 2025
 						</Link>
 					</div>
 				</div>

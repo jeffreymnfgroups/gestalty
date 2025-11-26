@@ -43,7 +43,8 @@ const config: Config = {
       sm: { min: "401px", max: "768px" },
       md: { min: "769px", max: "1024px" },
       lg: { min: "1025px", max: "1490px" },
-      xl: { min: "1491px" },
+      xl: { min: "1491px", max: "2399px" },
+      "2xl": { min: "2400px" },
     }
   },
   plugins: [],

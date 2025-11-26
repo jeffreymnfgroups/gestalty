@@ -98,6 +98,20 @@ body {
 		box-shadow: 0 10px 40px rgba(251, 193, 13, 0.2);
 		transition: all 0.3s ease-in-out;
 	}
+	
+	/* 3D Flip Card Utilities */
+	.perspective-1000 {
+		perspective: 1000px;
+	}
+	
+	.preserve-3d {
+		transform-style: preserve-3d;
+	}
+	
+	.backface-hidden {
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
 }
 
 .hover {

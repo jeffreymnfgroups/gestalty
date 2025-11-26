@@ -29,7 +29,7 @@ export default function Footer() {
 									title={item.title}
 									href={item.href}
 									key={item.id}
-									className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] hover:text-primaryYellow"
+									className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
 								/>
 							))}
 						</div>
@@ -40,12 +40,12 @@ export default function Footer() {
 								</h1>
 								<div className="flex flex-col gap-y-[10px]">
 									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] hover:text-primaryYellow"
+										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
 										title={`India`}
 										href="/"
 									/>
 									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] hover:text-primaryYellow"
+										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
 										title={`Online Platform`}
 										href="/"
 									/>
@@ -60,7 +60,7 @@ export default function Footer() {
 										key={item.id}
 										title={item.title}
 										href={item.href}
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] hover:text-primaryYellow"
+										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-offWhite capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
 									/>
 								))}
 							</div>
@@ -72,7 +72,7 @@ export default function Footer() {
 							<LinkHover
 								title="hello@gestalty.com"
 								href="/"
-								className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite before:bottom-[-3px] after:bottom-[-3px] hover:text-primaryYellow"
+								className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite before:bottom-[-3px] after:bottom-[-3px]"
 							/>
 						</div>
 					</div>
@@ -93,19 +93,19 @@ export default function Footer() {
 				<div className="w-1/2 h-full flex gap-[10px] justify-between items-end sm:w-full xm:w-full sm:flex-col xm:flex-col sm:items-start xm:items-start">
 					<div className="flex sm:flex-col xm:flex-col gap-[10px]">
 						<h1 className="paragraph font-medium font-NeueMontreal text-offWhite opacity-60">
-							© Gestalty 2024.
+							© Gestalty 2025.
 						</h1>
 						<LinkHover
 							title="Legal Terms"
 							href="/"
-							className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite opacity-60 before:bottom-[-3px] after:bottom-[-3px] hover:text-primaryYellow"
+							className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite opacity-60 before:bottom-[-3px] after:bottom-[-3px]"
 						/>
 					</div>
 					<div>
 						<LinkHover
 							title="Where Learning Meets Cognitive Science"
 							href="/"
-							className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite opacity-60 before:bottom-[-3px] after:bottom-[-3px] hover:text-primaryYellow"
+							className="before:h-[1px] after:h-[1px] paragraph font-medium text-offWhite opacity-60 before:bottom-[-3px] after:bottom-[-3px]"
 						/>
 					</div>
 				</div>
