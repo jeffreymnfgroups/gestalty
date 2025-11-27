@@ -30,14 +30,14 @@ export default function Ready() {
 
 				{/* Sub-Headline */}
 				<p className="text-[28px] leading-[38px] lg:text-[24px] lg:leading-[34px] md:text-[22px] md:leading-[32px] sm:text-[20px] sm:leading-[30px] xm:text-[18px] xm:leading-[28px] font-medium font-NeueMontreal text-darkBlue text-center max-w-[900px]">
-					This isn't about doing more. It's about doing what works. Start your high-order learning journey now.
+					This isn&apos;t about doing more. It&apos;s about doing what works. Start your high-order learning journey now.
 				</p>
 
 				{/* Motivational Quote */}
 				<div className="relative py-[20px] sm:py-[15px] xm:py-[12px]">
 					<div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-[60px] h-[2px] bg-darkBlue/30"></div>
 					<blockquote className="text-[24px] leading-[36px] lg:text-[22px] lg:leading-[34px] md:text-[20px] md:leading-[32px] sm:text-[18px] sm:leading-[28px] xm:text-[16px] xm:leading-[26px] font-normal font-NeueMontreal text-darkBlue/90 text-center italic max-w-[700px]">
-						"Every hour spent studying is a decision — make it wisely."
+						&quot;Every hour spent studying is a decision — make it wisely.&quot;
 					</blockquote>
 					<div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-[60px] h-[2px] bg-darkBlue/30"></div>
 				</div>
