@@ -1,7 +1,18 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-import { MentorshipHero, MentorshipPrograms, MentorshipSuccess } from "@/container";
+import {
+	MentorshipHero,
+	MentorshipPowerOfGuidance,
+	MentorshipDifferent,
+	MentorshipFeatures,
+	MentorshipVerifiedExcellence,
+	MentorshipAdvancedTools,
+	MentorshipHowItWorks,
+	MentorshipParentalPartnership,
+	MentorshipProvenOutcomes,
+	MentorshipCTA,
+} from "@/container";
 
 export default function Mentorship() {
 	useEffect(() => {
@@ -15,8 +26,15 @@ export default function Mentorship() {
 		<>
 			<Curve backgroundColor={"#fefefe"}>
 				<MentorshipHero />
-				<MentorshipPrograms />
-				<MentorshipSuccess />
+				<MentorshipPowerOfGuidance />
+				<MentorshipDifferent />
+				<MentorshipFeatures />
+				<MentorshipVerifiedExcellence />
+				<MentorshipAdvancedTools />
+				<MentorshipHowItWorks />
+				<MentorshipParentalPartnership />
+				<MentorshipProvenOutcomes />
+				<MentorshipCTA />
 				<Ready />
 			</Curve>
 		</>

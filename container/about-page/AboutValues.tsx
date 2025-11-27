@@ -1,27 +1,32 @@
 "use client";
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Award, Zap } from "lucide-react";
+import { FlaskConical, Target, Eye, Users, Heart, Sparkles } from "lucide-react";
 
 const values = [
 	{
-		icon: CheckCircle,
-		title: "Excellence",
-		description: "We strive for the highest standards in everything we do, from content quality to user experience.",
+		icon: FlaskConical,
+		title: "Science Over Superstition",
+		description: "Learning is not luck. It is measurable, improvable, and predictable. We apply adult learning principles to increase engagement and outcomes.",
+	},
+	{
+		icon: Target,
+		title: "Strategy Over Intensity",
+		description: "Consistency and deliberate practice outperform brute-force studying. Strategic learners feel more in control of their preparation journey.",
+	},
+	{
+		icon: Eye,
+		title: "Clarity Over Chaos",
+		description: "Students deserve to know exactly where they stand, every day. Clarity naturally improves psychological resilience.",
 	},
 	{
 		icon: Users,
-		title: "Student-Centric",
-		description: "Every decision we make is driven by what's best for our students' success and learning outcomes.",
+		title: "Equity Over Access Gaps",
+		description: "High-quality, personalized preparation should be available to every student—regardless of geography or background.",
 	},
 	{
-		icon: Award,
-		title: "Scientific Rigor",
-		description: "We base our methods on proven research and continuously validate our approaches with data.",
-	},
-	{
-		icon: Zap,
-		title: "Innovation",
-		description: "We constantly explore new technologies and methodologies to improve learning effectiveness.",
+		icon: Heart,
+		title: "Empowerment Over Pressure",
+		description: "We design systems that reduce cognitive burden, build confidence, and support long-term growth.",
 	},
 ];
 
@@ -34,16 +39,24 @@ export default function AboutValues() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="mb-16 text-center">
-					<h2 className="sub-heading font-bold font-FoundersGrotesk text-darkBlue mb-4">
-						Our Values
+					className="mb-12 text-center">
+					<h2 className="sub-heading font-bold font-FoundersGrotesk text-darkBlue mb-6">
+						Core Values — What We Stand For
 					</h2>
-					<p className="paragraph text-grayBlue max-w-2xl mx-auto">
-						These principles guide everything we do and shape how we serve our community.
-					</p>
+					<h3 className="text-2xl font-semibold font-FoundersGrotesk text-darkBlue mb-4">
+						Our Guiding Principles
+					</h3>
+					<div className="space-y-3 mb-8">
+						<p className="paragraph text-primaryYellow font-semibold text-lg italic">
+							"Don't just study harder. Study scientifically."
+						</p>
+						<p className="paragraph text-primaryYellow font-semibold text-lg italic">
+							"Where your effort meets strategy."
+						</p>
+					</div>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 gap-6 mb-12">
 					{values.map((value, index) => {
 						const Icon = value.icon;
 						return (
@@ -71,6 +84,23 @@ export default function AboutValues() {
 						);
 					})}
 				</div>
+
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6 }}
+					className="bg-darkBlue p-8 rounded-xl text-center">
+					<div className="flex justify-center mb-4">
+						<Sparkles size={40} className="text-primaryYellow" />
+					</div>
+					<h3 className="text-2xl font-bold font-FoundersGrotesk text-offWhite mb-4">
+						The Gestalty Advantage
+					</h3>
+					<p className="paragraph text-offWhite/80 max-w-3xl mx-auto">
+						This psychology + academics integrated system mirrors real-world preparation challenges while offering data-driven, emotionally sustainable learning pathways that promote intrinsic excellence.
+					</p>
+				</motion.div>
 			</div>
 		</section>
 	);

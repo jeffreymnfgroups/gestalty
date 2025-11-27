@@ -41,7 +41,7 @@ export default function MentorshipSuccess() {
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-8">
 					{successStories.map((story, index) => (
 						<TestimonialCard
 							key={index}

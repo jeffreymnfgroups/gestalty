@@ -1,7 +1,17 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-import { FeaturesHero, FeaturesGrid, FeaturesComparison } from "@/container";
+import {
+	FeaturesHero,
+	ValueProposition,
+	FeaturesGrid,
+	BarriersWeBreak,
+	AdvancedAnalyticsEngine,
+	WhoItsFor,
+	WhyGestaltyDifferent,
+	FeaturesComparison,
+	FinalCTA,
+} from "@/container";
 
 export default function Features() {
 	useEffect(() => {
@@ -15,8 +25,14 @@ export default function Features() {
 		<>
 			<Curve backgroundColor={"#fefefe"}>
 				<FeaturesHero />
+				<ValueProposition />
 				<FeaturesGrid />
+				<BarriersWeBreak />
+				<AdvancedAnalyticsEngine />
+				<WhoItsFor />
+				<WhyGestaltyDifferent />
 				<FeaturesComparison />
+				<FinalCTA />
 				<Ready />
 			</Curve>
 		</>

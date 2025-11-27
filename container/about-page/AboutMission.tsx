@@ -1,24 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Lightbulb, Eye, Rocket } from "lucide-react";
-
-const missionPoints = [
-	{
-		icon: Lightbulb,
-		title: "Mission",
-		description: "To empower every aspirant with science-driven learning tools that maximize their potential and transform exam preparation from a challenge into a systematic journey to success.",
-	},
-	{
-		icon: Eye,
-		title: "Vision",
-		description: "To become the world's most trusted cognitive learning platform, where every student achieves their academic goals through evidence-based, personalized study systems.",
-	},
-	{
-		icon: Rocket,
-		title: "Purpose",
-		description: "We believe that with the right tools, methodology, and support, every serious aspirant can excel. Our purpose is to make elite-level preparation accessible to all.",
-	},
-];
+import { Eye, Target } from "lucide-react";
 
 export default function AboutMission() {
 	return (
@@ -30,37 +12,51 @@ export default function AboutMission() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
 					className="mb-16 text-center">
-					<h2 className="sub-heading font-bold font-FoundersGrotesk text-offWhite mb-4">
-						Our Mission, Vision & Purpose
+					<h2 className="sub-heading font-bold font-FoundersGrotesk text-offWhite mb-8">
+						Vision & Mission
 					</h2>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{missionPoints.map((point, index) => {
-						const Icon = point.icon;
-						return (
-							<motion.div
-								key={index}
-								initial={{ opacity: 0, y: 30 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ duration: 0.6, delay: index * 0.2 }}
-								className="bg-offWhite/5 backdrop-blur-sm border border-primaryYellow/20 rounded-xl p-8 hover:border-primaryYellow/50 transition-all duration-300">
-								<div className="mb-6">
-									<Icon
-										size={40}
-										className="text-primaryYellow"
-									/>
-								</div>
-								<h3 className="text-xl font-semibold font-FoundersGrotesk text-offWhite mb-4">
-									{point.title}
-								</h3>
-								<p className="paragraph text-offWhite/80">
-									{point.description}
-								</p>
-							</motion.div>
-						);
-					})}
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-8 mb-12">
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6 }}
+						className="bg-offWhite/5 backdrop-blur-sm border border-primaryYellow/20 rounded-xl p-8 hover:border-primaryYellow/50 transition-all duration-300">
+						<div className="mb-6">
+							<Eye
+								size={40}
+								className="text-primaryYellow"
+							/>
+						</div>
+						<h3 className="text-2xl font-semibold font-FoundersGrotesk text-offWhite mb-4">
+							Vision: Creating Equitable Excellence
+						</h3>
+						<p className="paragraph text-offWhite/80">
+							We build a learning ecosystem where every aspirant can access personalized, research-validated preparation tools that unleash true potential, enable measurable excellence, foster cognitive mastery, transform opportunity into achievement.
+						</p>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						className="bg-offWhite/5 backdrop-blur-sm border border-primaryYellow/20 rounded-xl p-8 hover:border-primaryYellow/50 transition-all duration-300">
+						<div className="mb-6">
+							<Target
+								size={40}
+								className="text-primaryYellow"
+							/>
+						</div>
+						<h3 className="text-2xl font-semibold font-FoundersGrotesk text-offWhite mb-4">
+							Mission: From Fragmentation to Integration
+						</h3>
+						<p className="paragraph text-offWhite/80">
+							We transform fragmented learning behaviors into strategic metrics that foster cohesive, outcome-driven study experiences—consolidating acquired knowledge into clear, actionable direction at every stage of the learning journey.
+						</p>
+					</motion.div>
 				</div>
 			</div>
 		</section>

@@ -33,9 +33,18 @@ export { default as Principles } from './about-page/Principles';
 export { default as Partners } from './about-page/Partners';
 export { default as Insights } from './about-page/Insights';
 export { default as AboutHero } from './about-page/AboutHero';
+export { default as OriginStory } from './about-page/OriginStory';
+export { default as HiddenCrisis } from './about-page/HiddenCrisis';
+export { default as QuestionThatChanged } from './about-page/QuestionThatChanged';
+export { default as GestaltySolution } from './about-page/GestaltySolution';
+export { default as WhatWeBuiltFor } from './about-page/WhatWeBuiltFor';
 export { default as AboutMission } from './about-page/AboutMission';
 export { default as AboutValues } from './about-page/AboutValues';
+export { default as FromIdeaToImpact } from './about-page/FromIdeaToImpact';
+export { default as CompanyEvolution } from './about-page/CompanyEvolution';
+export { default as DemonstratedExpertise } from './about-page/DemonstratedExpertise';
 export { default as AboutTeam } from './about-page/AboutTeam';
+export { default as JoinCognitiveRevolution } from './about-page/JoinCognitiveRevolution';
 
 // insights page
 export { default as Heroinsights } from './insights-page/Hero';
@@ -59,13 +68,37 @@ export { default as VideoWorkiz } from './workiz-page/Video';
 export { default as PhilosophyHero } from './philosophy-page/PhilosophyHero';
 export { default as PhilosophyPrinciples } from './philosophy-page/PhilosophyPrinciples';
 export { default as PhilosophyResearch } from './philosophy-page/PhilosophyResearch';
+export { default as WhyEffortDoesntEqualProgress } from './philosophy-page/WhyEffortDoesntEqualProgress';
+export { default as LearningAcumenSystem } from './philosophy-page/LearningAcumenSystem';
+export { default as PlatformEthos } from './philosophy-page/PlatformEthos';
+export { default as PhilosophyForAdultLearners } from './philosophy-page/PhilosophyForAdultLearners';
+export { default as BusinessAcumenToLearningAcumen } from './philosophy-page/BusinessAcumenToLearningAcumen';
+export { default as ScienceBehindApproach } from './philosophy-page/ScienceBehindApproach';
+export { default as LiveLearningEngine } from './philosophy-page/LiveLearningEngine';
+export { default as ExpectedOutcomes } from './philosophy-page/ExpectedOutcomes';
+export { default as CallToAction } from './philosophy-page/CallToAction';
 
 // features page
 export { default as FeaturesHero } from './features-page/FeaturesHero';
+export { default as ValueProposition } from './features-page/ValueProposition';
 export { default as FeaturesGrid } from './features-page/FeaturesGrid';
+export { default as BarriersWeBreak } from './features-page/BarriersWeBreak';
+export { default as AdvancedAnalyticsEngine } from './features-page/AdvancedAnalyticsEngine';
+export { default as WhoItsFor } from './features-page/WhoItsFor';
+export { default as WhyGestaltyDifferent } from './features-page/WhyGestaltyDifferent';
 export { default as FeaturesComparison } from './features-page/FeaturesComparison';
+export { default as FinalCTA } from './features-page/FinalCTA';
 
 // mentorship page
 export { default as MentorshipHero } from './mentorship-page/MentorshipHero';
+export { default as MentorshipPowerOfGuidance } from './mentorship-page/MentorshipPowerOfGuidance';
+export { default as MentorshipDifferent } from './mentorship-page/MentorshipDifferent';
+export { default as MentorshipFeatures } from './mentorship-page/MentorshipFeatures';
+export { default as MentorshipVerifiedExcellence } from './mentorship-page/MentorshipVerifiedExcellence';
+export { default as MentorshipAdvancedTools } from './mentorship-page/MentorshipAdvancedTools';
+export { default as MentorshipHowItWorks } from './mentorship-page/MentorshipHowItWorks';
+export { default as MentorshipParentalPartnership } from './mentorship-page/MentorshipParentalPartnership';
+export { default as MentorshipProvenOutcomes } from './mentorship-page/MentorshipProvenOutcomes';
+export { default as MentorshipCTA } from './mentorship-page/MentorshipCTA';
 export { default as MentorshipPrograms } from './mentorship-page/MentorshipPrograms';
 export { default as MentorshipSuccess } from './mentorship-page/MentorshipSuccess';

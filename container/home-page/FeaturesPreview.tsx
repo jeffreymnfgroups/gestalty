@@ -95,32 +95,32 @@ export default function FeaturesPreview() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.2 }}>
-							<table className="w-full border-collapse bg-white rounded-lg overflow-hidden" style={{ minWidth: '950px' }}>
+							<table className="w-full border-collapse bg-white rounded-lg overflow-hidden" style={{ minWidth: '750px' }}>
 								<thead>
 									<tr>
 										{/* Problem Header */}
-										<th className="px-8 py-6 bg-gray-50 border-b-2 border-gray-300 text-left">
-											<div className="flex items-center gap-3">
-												<AlertCircle size={22} className="text-gray-700 flex-shrink-0" />
-												<span className="text-base lg:text-lg xl:text-xl font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
+										<th className="px-6 py-4 bg-gray-50 border-b-2 border-gray-300 text-left">
+											<div className="flex items-center gap-2">
+												<AlertCircle size={18} className="text-gray-700 flex-shrink-0" />
+												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
 													Problem
 												</span>
 											</div>
 										</th>
 										{/* Impact Header */}
-										<th className="px-8 py-6 bg-gray-50 border-b-2 border-gray-300 text-left">
-											<div className="flex items-center gap-3">
-												<ArrowRight size={22} className="text-gray-700 flex-shrink-0" />
-												<span className="text-base lg:text-lg xl:text-xl font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
+										<th className="px-6 py-4 bg-gray-50 border-b-2 border-gray-300 text-left">
+											<div className="flex items-center gap-2">
+												<ArrowRight size={18} className="text-gray-700 flex-shrink-0" />
+												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
 													Impact
 												</span>
 											</div>
 										</th>
 										{/* Solution Header - Highlighted */}
-										<th className="px-8 py-6 bg-green-50 border-b-2 border-green-300 text-left">
-											<div className="flex items-center gap-3">
-												<CheckCircle2 size={22} className="text-green-600 flex-shrink-0" />
-												<span className="text-base lg:text-lg xl:text-xl font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
+										<th className="px-6 py-4 bg-green-50 border-b-2 border-green-300 text-left">
+											<div className="flex items-center gap-2">
+												<CheckCircle2 size={18} className="text-green-600 flex-shrink-0" />
+												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
 													Gestalty Solution
 												</span>
 											</div>
@@ -143,20 +143,20 @@ export default function FeaturesPreview() {
 												index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
 											}`}>
 											{/* Problem Cell */}
-											<td className="px-8 py-6 align-top" style={{ minWidth: '280px' }}>
-												<div className="text-base lg:text-lg xl:text-xl font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
+											<td className="px-6 py-4 align-top" style={{ minWidth: '220px' }}>
+												<div className="text-sm lg:text-base xl:text-lg font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
 													{item.problem}
 												</div>
 											</td>
 											{/* Impact Cell */}
-											<td className="px-8 py-6 align-top" style={{ minWidth: '320px' }}>
-												<div className="text-base lg:text-lg xl:text-xl font-NeueMontreal text-grayBlue leading-relaxed">
+											<td className="px-6 py-4 align-top" style={{ minWidth: '250px' }}>
+												<div className="text-sm lg:text-base xl:text-lg font-NeueMontreal text-grayBlue leading-relaxed">
 													{item.impact}
 												</div>
 											</td>
 											{/* Solution Cell - Highlighted */}
-											<td className="px-8 py-6 align-top bg-green-50/60" style={{ minWidth: '350px' }}>
-												<div className="text-base lg:text-lg xl:text-xl font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
+											<td className="px-6 py-4 align-top bg-green-50/60" style={{ minWidth: '280px' }}>
+												<div className="text-sm lg:text-base xl:text-lg font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
 													{item.solution}
 												</div>
 											</td>

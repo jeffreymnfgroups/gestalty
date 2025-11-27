@@ -1,7 +1,18 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-import { PhilosophyHero, PhilosophyPrinciples, PhilosophyResearch } from "@/container";
+import {
+	PhilosophyHero,
+	WhyEffortDoesntEqualProgress,
+	LearningAcumenSystem,
+	PlatformEthos,
+	PhilosophyForAdultLearners,
+	BusinessAcumenToLearningAcumen,
+	ScienceBehindApproach,
+	LiveLearningEngine,
+	ExpectedOutcomes,
+	CallToAction,
+} from "@/container";
 
 export default function Philosophy() {
 	useEffect(() => {
@@ -15,8 +26,15 @@ export default function Philosophy() {
 		<>
 			<Curve backgroundColor={"#fefefe"}>
 				<PhilosophyHero />
-				<PhilosophyPrinciples />
-				<PhilosophyResearch />
+				<WhyEffortDoesntEqualProgress />
+				<LearningAcumenSystem />
+				<PlatformEthos />
+				<PhilosophyForAdultLearners />
+				<BusinessAcumenToLearningAcumen />
+				<ScienceBehindApproach />
+				<LiveLearningEngine />
+				<ExpectedOutcomes />
+				<CallToAction />
 				<Ready />
 			</Curve>
 		</>

@@ -39,7 +39,7 @@ export default function PhilosophyResearch() {
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-8">
 					{researchAreas.map((area, index) => {
 						const Icon = area.icon;
 						return (

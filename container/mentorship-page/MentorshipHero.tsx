@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { Users, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -12,35 +11,23 @@ export default function MentorshipHero() {
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
-					className="max-w-4xl">
+					className="max-w-5xl">
 					<h1 className="heading font-bold font-FoundersGrotesk text-offWhite mb-6">
-						Expert Mentorship Programs
+						Expert Mentorship – Your Guide to Precision Success
 					</h1>
-					<p className="sub-paragraph text-offWhite/80 mb-8">
-						Get personalized guidance from experienced educators and cognitive scientists who
-						understand what it takes to excel in competitive exams. Our mentorship programs
-						combine strategic planning, motivation, and proven study techniques.
+					<p className="sub-paragraph text-primaryYellow font-semibold mb-4">
+						Where Learning Psychology Meets Expert Guidance
 					</p>
-					<div className="flex gap-8 mb-8">
-						<div className="flex items-center gap-3">
-							<Users size={32} className="text-primaryYellow" />
-							<div>
-								<p className="text-2xl font-bold text-offWhite">50+</p>
-								<p className="small-text text-offWhite/70">Expert Mentors</p>
-							</div>
-						</div>
-						<div className="flex items-center gap-3">
-							<BookOpen size={32} className="text-primaryYellow" />
-							<div>
-								<p className="text-2xl font-bold text-offWhite">50000+</p>
-								<p className="small-text text-offWhite/70">Mentorship Hours</p>
-							</div>
-						</div>
-					</div>
+					<p className="sub-paragraph text-offWhite/90 mb-6 font-semibold">
+						Backed by peer-reviewed research. Guaranteed to improve performance.
+					</p>
+					<p className="sub-paragraph text-offWhite/80 mb-8">
+						Preparing for NEET, State PSC, or UPSC demands more than hard work—it requires strategic precision. Gestalty combines cutting-edge learning psychology with personalized mentorship to transform how you prepare, progress, and perform.
+					</p>
 					<Link
 						href="/contact"
 						className="inline-flex items-center gap-2 px-8 py-4 bg-primaryYellow text-darkBlue font-semibold font-NeueMontreal rounded-full hover:scale-105 transition-transform duration-300 glow-yellow-hover">
-						<span>Book a Session</span>
+						<span>Connect with a Mentor</span>
 						<ArrowRight size={20} />
 					</Link>
 				</motion.div>

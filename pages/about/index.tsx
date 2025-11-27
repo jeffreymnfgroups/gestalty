@@ -1,7 +1,21 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-import { AboutHero, AboutMission, AboutTeam, AboutValues } from "@/container";
+import {
+	AboutHero,
+	OriginStory,
+	HiddenCrisis,
+	QuestionThatChanged,
+	GestaltySolution,
+	WhatWeBuiltFor,
+	AboutMission,
+	AboutValues,
+	FromIdeaToImpact,
+	CompanyEvolution,
+	DemonstratedExpertise,
+	AboutTeam,
+	JoinCognitiveRevolution,
+} from "@/container";
 
 export default function About() {
 	useEffect(() => {
@@ -15,9 +29,18 @@ export default function About() {
 		<>
 			<Curve backgroundColor={"#fefefe"}>
 				<AboutHero />
+				<OriginStory />
+				<HiddenCrisis />
+				<QuestionThatChanged />
+				<GestaltySolution />
+				<WhatWeBuiltFor />
 				<AboutMission />
 				<AboutValues />
+				<FromIdeaToImpact />
+				<CompanyEvolution />
+				<DemonstratedExpertise />
 				<AboutTeam />
+				<JoinCognitiveRevolution />
 				<Ready />
 			</Curve>
 		</>

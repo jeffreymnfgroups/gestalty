@@ -1,79 +1,79 @@
 "use client";
 import { motion } from "framer-motion";
 import {
-	Brain,
-	Target,
-	TrendingUp,
-	BookOpen,
-	Users,
-	Zap,
 	BarChart3,
-	Clock,
-	CheckCircle2,
-	Sparkles,
+	TrendingUp,
+	Target,
+	RotateCcw,
+	Brain,
+	Lightbulb,
+	Map,
+	Layers,
+	Users,
+	Handshake,
 } from "lucide-react";
 import { FeatureGrid } from "@/components";
 
 const features = [
 	{
 		id: 1,
-		icon: Brain,
-		title: "AI-Guided Learning Paths",
-		description: "Personalized study plans that adapt to your learning pace and optimize for maximum retention.",
+		icon: BarChart3,
+		title: "Learning Analytics Dashboard",
+		description: "Track every learning stage in real-time. Monitor Reading, Learning, Revision, and Practice stages with visual progress indicators. Know exactly where you stand at every moment of your preparation journey. Key Benefit: Transform invisible effort into visible progress.",
 	},
 	{
 		id: 2,
-		icon: Target,
-		title: "Performance Analytics",
-		description: "Real-time tracking of your progress with detailed insights into strengths and areas for improvement.",
+		icon: TrendingUp,
+		title: "Quantified Learning Quality",
+		description: "Measure depth, not just duration. Go beyond time tracking to measure understanding depth, application ability, and retention strength. Quality over quantity, every single time. Key Benefit: Focus effort where it creates maximum impact.",
 	},
 	{
 		id: 3,
-		icon: TrendingUp,
-		title: "Adaptive Assessments",
-		description: "Smart tests that adjust difficulty based on your performance, ensuring optimal challenge level.",
+		icon: Target,
+		title: "SMART Goal Framework",
+		description: "Structure your preparation with precision. Set Specific, Measurable, Achievable, Relevant, Time-bound objectives. Break overwhelming targets into actionable daily milestones. Key Benefit: Replace anxiety with clarity and direction.",
 	},
 	{
 		id: 4,
-		icon: BookOpen,
-		title: "Science-Based Curriculum",
-		description: "Content structured using proven learning methodologies like spaced repetition and active recall.",
+		icon: RotateCcw,
+		title: "Retention & Revision System",
+		description: "Never forget what you've learned. AI-powered reminders based on spaced repetition science and cognitive forgetting curves ensure optimal retention and review timing. Key Benefit: 80%+ revision compliance dramatically reduces forgetting.",
 	},
 	{
 		id: 5,
-		icon: Users,
-		title: "Expert Mentorship",
-		description: "Access to experienced educators and cognitive scientists who guide your preparation journey.",
+		icon: Brain,
+		title: "Psychology Integration",
+		description: "Every tool validated by cognitive science. No random features—every intervention backed by proven psychological research and learning science principles. Key Benefit: Trust that your preparation methods actually work.",
 	},
 	{
 		id: 6,
-		icon: Zap,
-		title: "Efficient Study Schedules",
-		description: "Optimized timetables that balance all subjects while maximizing learning effectiveness.",
+		icon: Lightbulb,
+		title: "Metacognitive Tools",
+		description: "Learn how to learn more effectively. Develop planning, self-monitoring, and reflection skills that transform you from passive student to strategic learner. Key Benefit: Build skills that serve you beyond just one exam.",
 	},
 	{
 		id: 7,
-		icon: BarChart3,
-		title: "Progress Visualization",
-		description: "Clear visual representations of your learning journey with actionable insights.",
+		icon: Map,
+		title: "Challenge Map",
+		description: "Build mastery progressively. Interactive roadmap identifies weak spots with step-by-step leveling system. Know exactly what to tackle next for continuous improvement. Key Benefit: Eliminate blind spots and knowledge gaps systematically.",
 	},
 	{
 		id: 8,
-		icon: Clock,
-		title: "Time Management Tools",
-		description: "Smart scheduling and time tracking to help you make the most of every study session.",
+		icon: Layers,
+		title: "Multi-Layer Dashboards",
+		description: "Real-time visibility for everyone. Separate dashboards for students, mentors, and parents show progress, intervention needs, and accountability metrics in one unified system. Key Benefit: Connected support system with transparency at every level.",
 	},
 	{
 		id: 9,
-		icon: CheckCircle2,
-		title: "Comprehensive Question Bank",
-		description: "Extensive collection of questions aligned with NEET, JEE, and UPSC exam patterns.",
+		icon: Users,
+		title: "Expert Mentor Community",
+		description: "Strategic guidance when you need it. Access 1:1 strategic sessions, customized study plans, answer-writing evaluation, and mock interview preparation from experienced mentors. Key Benefit: Personalized expertise tailored to your learning style.",
 	},
 	{
 		id: 10,
-		icon: Sparkles,
-		title: "Cognitive Load Optimization",
-		description: "Content presentation designed to minimize cognitive overload and enhance comprehension.",
+		icon: Handshake,
+		title: "Accountability Partnerships",
+		description: "Maintain consistency with peer support. Peer-matching system with regular check-ins and momentum tracking keeps you accountable and motivated throughout your journey. Key Benefit: Stay consistent with built-in support and encouragement.",
 	},
 ];
 
@@ -88,10 +88,10 @@ export default function FeaturesGridSection() {
 					transition={{ duration: 0.6 }}
 					className="mb-16 text-center">
 					<h2 className="sub-heading font-bold font-FoundersGrotesk text-offWhite mb-4">
-						Complete Feature Set
+						10 Science-Driven Tools for Exam Mastery
 					</h2>
 					<p className="paragraph text-offWhite/80 max-w-2xl mx-auto">
-						Everything you need to excel in your exams, all in one intelligent platform.
+						Each feature backed by cognitive science research and validated through real aspirant success stories.
 					</p>
 				</motion.div>
 
