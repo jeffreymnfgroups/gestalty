@@ -77,3 +77,8 @@ export { default as nestle } from './nestle.svg';
 export { default as JEE } from './JEE.png';
 export { default as NTA } from './NTA_logo.png';
 export { default as UPSC } from './upsc.png';
+
+// hero images
+export { default as heroImage1 } from './1.webp';
+export { default as heroImage2 } from './2.webp';
+export { default as heroImage3 } from './3.webp';

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-import { About, Hero, TrustBar, ProblemStatement, FeaturesPreview, ScienceApproach, ScienceFoundation, SocialProof } from "@/container";
+import { About, Hero, ProblemStatement, FeaturesPreview, ScienceApproach, ScienceFoundation, SocialProof } from "@/container";
 
 export default function Home() {
 	useEffect(() => {
@@ -15,7 +15,6 @@ export default function Home() {
 		<>
 			<Curve backgroundColor={"#fefefe"}>
 				<Hero />
-				<TrustBar />
 				<ProblemStatement />
 				<FeaturesPreview />
 				<ScienceApproach />

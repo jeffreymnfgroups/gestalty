@@ -1,25 +1,14 @@
 "use client";
-import Link from "next/link";
 import { useRef } from "react";
 import { TextMask } from "@/animation";
-import { ArrowUpRight } from "lucide-react";
-import { Eyes, RoundButton, Rounded } from "@/components";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { RoundButton } from "@/components";
 
 export default function Ready() {
-	const container = useRef(null);
 	const headline = ["Are You Ready to Join", "the Cognitive Revolution", "and Build Knowledge", "the Right Way?"];
-
-	const { scrollYProgress } = useScroll({
-		target: container,
-		offset: ["start end", "end start"],
-	});
-	const mq = useTransform(scrollYProgress, [0, 1], [0, -700]);
 
 	return (
 		<section
-			className="w-full relative z-30 min-h-screen sm:h-screen xm:h-screen bg-primaryYellow padding-y rounded-t-[20px] mt-[-20px]"
-			ref={container}>
+			className="w-full relative z-30 min-h-screen sm:h-screen xm:h-screen bg-primaryYellow padding-y rounded-t-[20px] mt-[-20px]">
 			<div className="w-full h-full flex justify-center gap-[40px] sm:gap-[30px] xm:gap-[25px] items-center flex-col max-w-[1600px] mx-auto padding-x">
 				{/* Headline */}
 				<div className="flex flex-col gap-[15px] sm:gap-[12px] xm:gap-[10px] text-center">
@@ -60,33 +49,8 @@ export default function Ready() {
 							style={{ color: "#fefefe" }}
 						/>
 					</div>
-					<div className="flex items-center justify-between bg-transparent cursor-pointer rounded-full group border-2 border-darkBlue">
-						<Link
-							className="xl:text-[18px] xl:leading-[28px] text-[14px] leading-[24px] uppercase font-normal font-NeueMontreal"
-							href="/contact">
-							<Rounded
-								className="py-[6px]"
-								backgroundColor="#19254c">
-								<p className="z-10 px-[10px] ml-[15px] py-[6px] text-offWhite">
-									Talk to an Expert
-								</p>
-								<div className="bg-darkBlue group-hover:bg-primaryYellow text-offWhite p-[10px] rounded-full scale-[0.3] mr-[10px] group-hover:scale-[0.9] transition-all z-10 transform duration-[0.3s] ease-[.215,.61,.355,1]">
-									<ArrowUpRight
-										strokeWidth={1.5}
-										size={30}
-										className="scale-[0] group-hover:scale-[1]"
-									/>
-								</div>
-							</Rounded>
-						</Link>
-					</div>
 				</div>
 			</div>
-			<motion.div
-				className="w-full absolute top-[50%] transform translate-y-[-50%] gap-[30px] flex items-center justify-center"
-				style={{ y: mq }}>
-				<Eyes className="w-[200px] h-[200px] md:w-[170px] md:h-[170px] sm:w-[150px] sm:h-[150px] xm:w-[150px] xm:h-[150px] sm:flex-col xm:flex-col" />
-			</motion.div>
 		</section>
 	);
 }

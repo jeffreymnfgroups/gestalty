@@ -102,3 +102,11 @@ export { default as MentorshipProvenOutcomes } from './mentorship-page/Mentorshi
 export { default as MentorshipCTA } from './mentorship-page/MentorshipCTA';
 export { default as MentorshipPrograms } from './mentorship-page/MentorshipPrograms';
 export { default as MentorshipSuccess } from './mentorship-page/MentorshipSuccess';
+
+// how-it-works page
+export { default as HowItWorksHero } from './how-it-works-page/Hero';
+export { default as FourStepJourney } from './how-it-works-page/FourStepJourney';
+export { default as DailyRoutine } from './how-it-works-page/DailyRoutine';
+export { default as WhyChooseGestalty } from './how-it-works-page/WhyChooseGestalty';
+export { default as ProvenOutcomes } from './how-it-works-page/ProvenOutcomes';
+export { default as GetStarted } from './how-it-works-page/GetStarted';
