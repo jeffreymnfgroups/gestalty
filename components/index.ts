@@ -1,7 +1,6 @@
 export { default as Ready } from "./Ready";
 export { default as Rounded } from "./Rounded";
 export { default as Marquee } from "./Marquee";
-export { default as Navbar } from "./Navbar";
 export { default as Footer } from "./Footer";
 export { default as BackgroundImg } from './BackgroundImg';
 export { default as Button } from './Button';
@@ -13,7 +12,6 @@ export { default as PlayVideo } from './PlayVideo';
 export { default as Curve } from './Curve/Curve';
 export { default as Ratings } from './Ratings';
 export { default as Heading } from './Heading';
-export { default as MobileNav } from './MobileNav';
 export { default as AnimatedCounter } from './AnimatedCounter';
 export { default as DashboardPreview } from './DashboardPreview';
 export { default as TrustBadges } from './TrustBadges';

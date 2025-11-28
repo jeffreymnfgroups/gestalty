@@ -26,6 +26,9 @@ body {
 }
 
 @layer utilities {
+	.container {
+		@apply w-full max-w-[82.8rem] my-0 mx-auto py-0 px-5 sm:px-7;
+	}
 	.padding-x {
 		@apply px-[50px] md:px-[30px] sm:px-[20px] xm:px-[20px];
 	}

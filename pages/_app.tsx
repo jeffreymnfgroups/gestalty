@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
-import { Footer, Navbar } from "@/components";
+import { Footer } from "@/components";
+import Header from "@/components/header";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({
@@ -13,7 +14,7 @@ export default function App({
 }) {
 	return (
 		<>
-			<Navbar />
+			<Header />
 			<AnimatePresence mode="wait">
 				<Component
 					key={router.route}

@@ -17,6 +17,7 @@ const config: Config = {
         offWhite: "#fefefe",             // Off-White - Light backgrounds, text contrast
         grayBlue: "#6a7188",             // Gray-Blue - Secondary text, borders, dividers
         beige: "#d8d1b2",                // Beige - Subtle backgrounds, accents
+        dark_black: "#1b1d1e",          // Dark black for navbar background
         
         // Legacy support (mapped to new colors)
         background: "#fefefe",
@@ -27,6 +28,9 @@ const config: Config = {
         heroSecondary: "#fefefe",
         heroAccent: "#d8d1b2",
         heroTertiary: "#6a7188",
+      },
+      boxShadow: {
+        header_shadow: '0px 1px 3px 0px rgba(0, 0, 0, 0.1)',
       },
       fontSize: {
         'hero-primary': ['64px', { lineHeight: '1.1', fontWeight: '700' }],
@@ -41,9 +45,9 @@ const config: Config = {
     screens: {
       xm: { max: "400px" },
       sm: { min: "401px", max: "768px" },
-      md: { min: "769px", max: "1024px" },
-      lg: { min: "1025px", max: "1490px" },
-      xl: { min: "1491px", max: "2399px" },
+      md: { min: "769px", max: "1023px" },
+      lg: { min: "1024px" },
+      xl: { min: "1491px" },
       "2xl": { min: "2400px" },
     }
   },
