@@ -91,6 +91,7 @@ export default function TrustBar() {
 																	fill
 																	className="object-contain"
 																	sizes="(max-width: 640px) 80px, (max-width: 768px) 100px, (max-width: 1024px) 120px, 140px"
+																	placeholder="empty"
 																/>
 															</div>
 															{logo.fullName && (

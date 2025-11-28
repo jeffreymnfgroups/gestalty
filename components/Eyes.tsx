@@ -29,6 +29,7 @@ export default function Eyes({ className }: { className: string }) {
 					src={eyes}
 					alt="img"
 					className="w-full h-full object-cover"
+					placeholder="empty"
 				/>
 			</div>
 			<div
@@ -40,6 +41,7 @@ export default function Eyes({ className }: { className: string }) {
 					src={eyes}
 					alt="img"
 					className="w-full h-full object-cover"
+					placeholder="empty"
 				/>
 			</div>
 		</div>

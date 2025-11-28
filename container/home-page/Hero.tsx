@@ -287,6 +287,7 @@ export default function Hero() {
                                   fill
                                   className="object-contain"
                                   sizes="(max-width: 640px) 100px, (max-width: 768px) 120px, (max-width: 1024px) 140px, 160px"
+                                  placeholder="empty"
                                 />
                               </div>
                             ) : (

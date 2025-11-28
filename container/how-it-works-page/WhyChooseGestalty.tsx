@@ -34,7 +34,6 @@ const benefitsAnimations = {
 	item: {
 		initial: { opacity: 0, y: 30 },
 		whileInView: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-		viewport: { once: true },
 	},
 };
 
@@ -64,11 +63,12 @@ export default function WhyChooseGestalty() {
 					{benefits.map((benefit, index) => {
 						const Icon = benefit.icon;
 						return (
-							<motion.div
-								key={benefit.title}
-								variants={benefitsAnimations.item}
-								className="bg-gradient-to-br from-lightBeige to-offWhite rounded-2xl p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-darkBlue/5 hover:border-primaryYellow/30"
-							>
+						<motion.div
+							key={benefit.title}
+							variants={benefitsAnimations.item}
+							viewport={{ once: true }}
+							className="bg-gradient-to-br from-lightBeige to-offWhite rounded-2xl p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-darkBlue/5 hover:border-primaryYellow/30"
+						>
 								<div className="w-16 h-16 sm:w-20 sm:h-20 bg-primaryYellow/20 rounded-full flex items-center justify-center mx-auto mb-4">
 									<Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primaryYellow" strokeWidth={2.5} />
 								</div>

@@ -12,7 +12,6 @@ const ctaAnimations = {
 	item: {
 		initial: { opacity: 0, y: 20 },
 		whileInView: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-		viewport: { once: true },
 	},
 };
 
@@ -35,12 +34,14 @@ export default function GetStarted() {
 				>
 					<motion.h2
 						variants={ctaAnimations.item}
+						viewport={{ once: true }}
 						className="text-3xl sm:text-4xl lg:text-5xl font-bold font-FoundersGrotesk text-white mb-6"
 					>
 						Get Started Today
 					</motion.h2>
 					<motion.p
 						variants={ctaAnimations.item}
+						viewport={{ once: true }}
 						className="text-lg sm:text-xl font-NeueMontreal text-offWhite/90 mb-8 max-w-2xl mx-auto leading-relaxed"
 					>
 						Join thousands who have transformed their exam prep with Gestalty's proven methodology
@@ -48,6 +49,7 @@ export default function GetStarted() {
 
 					<motion.div
 						variants={ctaAnimations.item}
+						viewport={{ once: true }}
 						className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center flex-wrap"
 					>
 						{ctaButtons.map((button, index) => (
@@ -70,6 +72,7 @@ export default function GetStarted() {
 
 					<motion.div
 						variants={ctaAnimations.item}
+						viewport={{ once: true }}
 						className="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8 text-offWhite/80"
 					>
 						<div className="flex items-center gap-2">

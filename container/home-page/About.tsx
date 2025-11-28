@@ -82,6 +82,7 @@ export default function About() {
 						className={`w-full h-full transition transform duration-[2s] ease-[.215,.61,.355,1] ${
 							hovered && "scale-[1.09]"
 						}`}
+						placeholder="empty"
 					/>
 				</div>
 			</div>

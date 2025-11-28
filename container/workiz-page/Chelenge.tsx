@@ -90,6 +90,7 @@ export default function Chelenge() {
 						src={after}
 						className="w-full object-cover rounded-[20px]"
 						alt="chelengeBgImg"
+						placeholder="empty"
 					/>
 				</div>
 			</div>

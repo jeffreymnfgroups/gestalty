@@ -54,7 +54,6 @@ const stepAnimations = {
 	item: {
 		initial: { opacity: 0, y: 30 },
 		whileInView: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-		viewport: { once: true },
 	},
 };
 
@@ -84,11 +83,12 @@ export default function FourStepJourney() {
 					{steps.map((step, index) => {
 						const Icon = step.icon;
 						return (
-							<motion.div
-								key={step.number}
-								variants={stepAnimations.item}
-								className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-darkBlue/5"
-							>
+						<motion.div
+							key={step.number}
+							variants={stepAnimations.item}
+							viewport={{ once: true }}
+							className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-darkBlue/5"
+						>
 								<div className="flex items-start gap-4 mb-4">
 									<div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primaryYellow/20 rounded-full flex items-center justify-center">
 										<Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primaryYellow" strokeWidth={2.5} />

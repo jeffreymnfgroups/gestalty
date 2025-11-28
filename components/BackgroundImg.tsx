@@ -11,6 +11,7 @@ export default function BackgroundImg({ src }: { src: StaticImageData }) {
 					src={src}
 					alt="img"
 					className="w-full h-full object-cover"
+					placeholder="empty"
 				/>
 			</div>
 		</div>
