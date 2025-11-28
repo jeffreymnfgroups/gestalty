@@ -1,6 +1,7 @@
 {
 	"name": "ochi-website-clone",
 	"version": "0.1.0",
+	"license": "MIT",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -20,7 +21,8 @@
 		"react-dom": "^18",
 		"react-icons": "^5.1.0",
 		"react-intersection-observer": "^9.8.1",
-		"sharp": "^0.33.3"
+		"sharp": "^0.33.3",
+		"base64-js": "^1.5.1"
 	},
 	"devDependencies": {
 		"@types/node": "^20",
