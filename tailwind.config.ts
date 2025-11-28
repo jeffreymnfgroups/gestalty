@@ -12,12 +12,12 @@ const config: Config = {
     extend: {
       colors: {
         // Gestalty Color Palette
-        primaryYellow: "#fbc10d",      // Primary Yellow - Main accent, highlights, CTAs
-        darkBlue: "#19254c",            // Dark Blue - Primary text, headings, backgrounds
-        offWhite: "#fefefe",             // Off-White - Light backgrounds, text contrast
-        grayBlue: "#6a7188",             // Gray-Blue - Secondary text, borders, dividers
-        beige: "#d8d1b2",                // Beige - Subtle backgrounds, accents
-        dark_black: "#1b1d1e",          // Dark black for navbar background
+        primaryYellow: "#fbc10d",
+        darkBlue: "#19254c",
+        offWhite: "#fefefe",
+        grayBlue: "#6a7188",
+        beige: "#d8d1b2",
+        dark_black: "#1b1d1e",
         
         // Legacy support (mapped to new colors)
         background: "#fefefe",
@@ -53,4 +53,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

@@ -10,7 +10,6 @@ export default function Document() {
         />
         <meta name="keywords" content="exam preparation, NEET, UPSC, State PSC, JEE, competitive exams, cognitive learning, science-based learning, exam prep platform, learning analytics" />
         <meta name="author" content="Gestalty" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

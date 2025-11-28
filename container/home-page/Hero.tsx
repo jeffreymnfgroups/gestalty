@@ -143,13 +143,13 @@ export default function Hero() {
 							</div>
 
 							{/* Social Proof Ticker */}
-							<motion.div
+							{/* <motion.div
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ delay: 2.5, duration: 0.6 }}
 								className="mt-8 lg:mt-12">
 								<SocialProofTicker />
-							</motion.div>
+							</motion.div> */}
 						</div>
 					</motion.div>
 				</div>

@@ -1,9 +1,6 @@
 export { default as eyes } from './eyes.svg';
 export { default as logo } from './logo.svg';
-export { default as mobileLogo } from './GestaltyFinal.svg';
-export { default as awwwards } from './awwwards.svg';
 export { default as aboutImg } from './aboutImg.webp';
-export { default as videoImg } from './videoImg.jpeg';
 export { default as project1 } from './project1.webp';
 export { default as project2 } from './project2.webp';
 export { default as project3 } from './project3.webp';
@@ -29,7 +26,6 @@ export { default as publication1 } from './publication1.jpeg';
 export { default as publication2 } from './publication2.png';
 export { default as publication3 } from './publication3.png';
 export { default as ochiside } from './GestaltyFinal.svg';
-export { default as eyeplay } from './eyeplay.svg';
 export { default as contactHero } from './contacthhero.jpg';
 
 // services page
@@ -42,9 +38,7 @@ export { default as capaybilities1 } from './capybilities1.jpeg';
 export { default as capaybilities2 } from './capybilities2.jpeg';
 export { default as capaybilities3 } from './capybilities3.jpeg';
 export { default as capaybilities4 } from './capybilities4.jpeg';
-export { default as capaybilities5 } from './capybilities5.jpeg';
 export { default as background } from './background.png';
-export { default as backgroundWebp } from './background.webp';
 
 // insights page assets
 
@@ -57,8 +51,6 @@ export { default as latest2 } from './latest2.jpeg';
 // ochi-team
 export { default as backgroundAbout } from './background-about.jpeg';
 export { default as Team1 } from './team1.jpeg';
-export { default as Team2 } from './team2.jpeg';
-export { default as Team3 } from './team3.jpeg';
 export { default as Team4 } from './team4.png';
 export { default as principles1 } from './principles1.jpeg';
 export { default as principles2 } from './principles2.jpeg';
@@ -80,11 +72,6 @@ export { default as workizhero } from './workizhero.jpg';
 export { default as planetly } from './planetly.svg';
 export { default as officevibe } from './officevibe.svg';
 export { default as nestle } from './nestle.svg';
-export { default as toyota } from './toyota.svg';
-export { default as lexus } from './lexus.svg';
-export { default as aflorihtmic } from './aflomatric.svg';
-export { default as orderlion } from './orderlion.svg';
-export { default as blackBox } from './blackBox.svg';
 
 // exam logos
 export { default as JEE } from './JEE.png';
