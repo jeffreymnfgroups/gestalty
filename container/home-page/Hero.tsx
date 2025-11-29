@@ -9,11 +9,11 @@ import { NTA, UPSC, JEE, heroImage1, heroImage2, heroImage3 } from "@/public";
 const heroSplitAnimations = {
   textContainer: {
     initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0, transition: { staggerChildren: 0.1, duration: 0.7, ease: "easeOut" } },
+    animate: { opacity: 1, x: 0, transition: { staggerChildren: 0.12, duration: 0.75, ease: "easeOut" } },
   },
   visualContainer: {
     initial: { opacity: 0, x: 50, scale: 0.95 },
-    animate: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } },
+    animate: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.85, delay: 0.35, ease: "easeOut" } },
   },
   item: {
     initial: { opacity: 0, y: 20 },
@@ -38,6 +38,7 @@ export default function Hero() {
               variants={heroSplitAnimations.textContainer}
               initial="initial"
               animate="animate"
+              style={{ willChange: "transform, opacity" }}
             >
               {/* Badge/Tag */}
               <motion.div
@@ -74,8 +75,8 @@ export default function Hero() {
                     className="absolute bottom-1.5 left-0 w-full h-3 bg-primaryYellow/30 -z-0"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    style={{ originX: 0 }}
+                    transition={{ duration: 0.85, delay: 0.45, ease: "easeOut" }}
+                    style={{ originX: 0, willChange: "transform" }}
                   />
                 </span> of  <br />
                 Successful Aspirants
@@ -151,14 +152,16 @@ export default function Hero() {
               variants={heroSplitAnimations.visualContainer}
               initial="initial"
               animate="animate"
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="relative w-full max-w-2xl grid grid-cols-2 gap-3 sm:gap-4">
                 {/* Top Large Horizontal Image */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  transition={{ duration: 0.65, delay: 0.45 }}
                   className="col-span-2 relative aspect-[2/1] rounded-[2rem] overflow-hidden shadow-lg group cursor-pointer"
+                  style={{ willChange: "transform, opacity" }}
                 >
                   <Image
                     src={heroImage1}
@@ -166,6 +169,7 @@ export default function Hero() {
                     fill
                     className="object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkBlue/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
@@ -174,8 +178,9 @@ export default function Hero() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
+                  transition={{ duration: 0.65, delay: 0.65 }}
                   className="relative aspect-square rounded-[2rem] overflow-hidden shadow-lg group cursor-pointer"
+                  style={{ willChange: "transform, opacity" }}
                 >
                   <Image
                     src={heroImage2}
@@ -183,6 +188,7 @@ export default function Hero() {
                     fill
                     className="object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkBlue/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
@@ -191,8 +197,9 @@ export default function Hero() {
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
+                  transition={{ duration: 0.65, delay: 0.85 }}
                   className="relative aspect-square rounded-[2rem] overflow-hidden shadow-lg group cursor-pointer"
+                  style={{ willChange: "transform, opacity" }}
                 >
                   <Image
                     src={heroImage3}
@@ -200,6 +207,7 @@ export default function Hero() {
                     fill
                     className="object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkBlue/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
@@ -213,8 +221,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-16 sm:mt-20 lg:mt-24 relative z-10"
+          style={{ willChange: "transform, opacity" }}
         >
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div 
@@ -226,8 +235,9 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.65 }}
                 className="text-center text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-medium font-NeueMontreal text-darkBlue mb-8 sm:mb-10 lg:mb-12 leading-relaxed"
+                style={{ willChange: "transform, opacity" }}
               >
                 <span className="inline-block">Built for India's Top Competitive Exams — Trusted by</span>{" "}
                 {["NEET", "State PSC", "UPSC", "JEE"].map((exam, index, array) => (
@@ -236,8 +246,9 @@ export default function Hero() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      transition={{ duration: 0.45, delay: index * 0.12 }}
                       className="relative inline-block mx-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-primaryYellow text-darkBlue rounded-full font-bold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] tracking-tight shadow-[0_2px_8px_rgba(251,193,13,0.3)] hover:shadow-[0_4px_12px_rgba(251,193,13,0.4)] transition-all duration-300 hover:scale-105"
+                      style={{ willChange: "transform, opacity" }}
                     >
                       {exam}
                     </motion.span>
@@ -262,11 +273,12 @@ export default function Hero() {
                       x: ["0%", "-50%"],
                     }}
                     transition={{
-                      duration: 30,
+                      duration: 35,
                       repeat: Infinity,
                       ease: "linear",
                       repeatType: "loop",
                     }}
+                    style={{ willChange: "transform" }}
                   >
                     {/* Render logos twice for seamless infinite loop */}
                     {Array.from({ length: 2 }).map((_, setIndex) => (

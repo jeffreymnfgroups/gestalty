@@ -1,8 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
-// White filter for all icons
-const whiteIconFilter = "brightness(0) saturate(100%) invert(100%)";
+import { Calendar, BarChart2, Lightbulb, Puzzle, ArrowUp, Heart, ArrowDown, CheckCircle2 } from "lucide-react";
 
 // Get icon container background color that complements beige (#dbd6cc)
 const getIconBgColor = (color: string) => {
@@ -22,42 +20,42 @@ const solutions = [
 		impact: "Underestimating syllabus size leads to rushed coverage and cramming",
 		solution: "Split Syllabus Engine: Breaks down syllabi into daily/weekly custom chunks",
 		color: "red",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/calendar-days.svg",
+		icon: Calendar,
 	},
 	{
 		problem: "Lack of Focus & Consistency",
 		impact: "Distractions and procrastination cause inconsistent study, leading to knowledge gaps, lower retention, and reduced productivity.",
 		solution: "Progress Tracking: Real-time stage-wise analytics pinpoint your journey",
 		color: "orange",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/chart-bar.svg",
+		icon: BarChart2,
 	},
 	{
 		problem: "Weak Study Techniques & Retention",
 		impact: "Passive learning leads to surface-level understanding and weak problem-solving",
 		solution: "Strategic Revision Reminders: Scheduled by proven spaced-repetition models for maximum retention",
 		color: "yellow",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/light-bulb.svg",
+		icon: Lightbulb,
 	},
 	{
 		problem: "Fragmented & Unsystematic Learning",
 		impact: "Fragmentation disrupts focused, organized, and efficient learning.",
 		solution: "Consistency Mapping: Visual charts and heatmaps reveal time, effort, and deviations",
 		color: "amber",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/puzzle-piece.svg",
+		icon: Puzzle,
 	},
 	{
 		problem: "Misalignment Between Effort & Outcomes",
 		impact: "Wasted effort results in slow improvement and discouraging outcomes",
 		solution: "AI Feedback Loop: Statistical tools calibrate effort with actual outcomes",
 		color: "yellow",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/arrow-trending-up.svg",
+		icon: ArrowUp,
 	},
 	{
 		problem: "Mental Health & Motivation Issues",
 		impact: "Anxiety, burnout, and low motivation harm results",
 		solution: "Cognitive Inertia Detector: ML algorithms spot resistance early and keep you on track",
 		color: "green",
-		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/heart.svg",
+		icon: Heart,
 	},
 ];
 
@@ -164,11 +162,12 @@ export default function FeaturesPreview() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true, margin: "-50px" }}
 							transition={{
-								duration: 0.5,
-								delay: 0.1 * index,
+								duration: 0.55,
+								delay: 0.08 * index,
 								ease: [0.33, 1, 0.68, 1]
 							}}
-							className="group relative">
+							className="group relative"
+							style={{ willChange: "transform, opacity" }}>
 							{/* Card */}
 							<div
 								className="relative h-full rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
@@ -183,11 +182,10 @@ export default function FeaturesPreview() {
 											className="p-2 rounded-full flex items-center justify-center w-10 h-10 flex-shrink-0"
 											style={{ backgroundColor: getIconBgColor(item.color) }}
 										>
-											<img
-												src={item.iconUrl}
-												alt="Problem Icon"
-												className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
-												style={{ filter: whiteIconFilter }}
+											<item.icon
+												size={20}
+												className="text-white transition-transform duration-300 group-hover:scale-110"
+												strokeWidth={2}
 											/>
 										</div>
 										<h4 className="text-xl md:text-2xl font-bold font-FoundersGrotesk text-darkBlue flex-1 leading-[1.3]">
@@ -203,11 +201,10 @@ export default function FeaturesPreview() {
 											className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
 											style={{ backgroundColor: "#6a7188" }}
 										>
-											<img
-												src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/arrow-trending-down.svg"
-												alt="Impact"
-												className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
-												style={{ filter: whiteIconFilter }}
+											<ArrowDown
+												size={14}
+												className="text-white transition-transform duration-300 group-hover:translate-x-1"
+												strokeWidth={2}
 											/>
 										</div>
 										<span className="text-sm uppercase tracking-wider font-semibold font-FoundersGrotesk text-darkBlue">
@@ -226,11 +223,10 @@ export default function FeaturesPreview() {
 											className="p-2 rounded-full flex items-center justify-center w-10 h-10 flex-shrink-0"
 											style={{ backgroundColor: "#5A7A6B" }}
 										>
-											<img
-												src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/check-circle.svg"
-												alt="Solution"
-												className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
-												style={{ filter: whiteIconFilter }}
+											<CheckCircle2
+												size={20}
+												className="text-white transition-transform duration-300 group-hover:scale-110"
+												strokeWidth={2}
 											/>
 										</div>
 										<div className="flex-1">

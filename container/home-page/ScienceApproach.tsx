@@ -3,10 +3,10 @@ import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { 
-	Target,
+	Crosshair,
 	Focus,
 	Lightbulb,
-	TrendingUp,
+	Activity,
 	User,
 	MessageCircle,
 	RotateCcw
@@ -20,7 +20,7 @@ if (typeof window !== "undefined") {
 const transformationAreas = [
 	{
 		area: "Planning",
-		icon: Target,
+		icon: Crosshair,
 		before: {
 			quote: "I feel lost...",
 			description: "Random study hours with no clarity or control"
@@ -56,7 +56,7 @@ const transformationAreas = [
 	},
 	{
 		area: "Progress",
-		icon: TrendingUp,
+		icon: Activity,
 		before: {
 			quote: "Am I doing enough?",
 			description: "Relying on subjective feelings of effort"
@@ -122,34 +122,37 @@ function StrategicLayer() {
 			});
 
 			if (titleRef.current) {
-				gsap.set(titleRef.current, { opacity: 0, y: 30 });
+				gsap.set(titleRef.current, { opacity: 0, y: 30, force3D: true });
 				headerTimeline.to(titleRef.current, {
 					opacity: 1,
 					y: 0,
-					duration: 0.8,
-					ease: "power3.out"
+					duration: 0.7,
+					ease: "power3.out",
+					force3D: true
 				});
 			}
 
 			if (descriptionRef.current) {
-				gsap.set(descriptionRef.current, { opacity: 0, y: 20 });
+				gsap.set(descriptionRef.current, { opacity: 0, y: 20, force3D: true });
 				headerTimeline.to(descriptionRef.current, {
 					opacity: 1,
 					y: 0,
-					duration: 0.7,
-					ease: "power2.out"
-				}, "-=0.4");
+					duration: 0.8,
+					ease: "power2.out",
+					force3D: true
+				}, "-=0.45");
 			}
 		}
 
 		// Section title animation
 		if (sectionRef.current && !prefersReducedMotion) {
-			gsap.set(sectionRef.current, { opacity: 0, y: 30 });
+			gsap.set(sectionRef.current, { opacity: 0, y: 30, force3D: true });
 			gsap.to(sectionRef.current, {
 				opacity: 1,
 				y: 0,
-				duration: 0.8,
+				duration: 0.75,
 				ease: "power3.out",
+				force3D: true,
 				scrollTrigger: {
 					trigger: sectionRef.current,
 					start: "top 85%",
@@ -161,16 +164,17 @@ function StrategicLayer() {
 		// Cards container animation
 		if (cardsContainerRef.current && !prefersReducedMotion) {
 			const cards = cardsContainerRef.current.children;
-			gsap.set(cards, { opacity: 0, scale: 0.9, y: 40 });
+			gsap.set(cards, { opacity: 0, scale: 0.9, y: 40, force3D: true });
 
 			gsap.to(cards, {
 				opacity: 1,
 				scale: 1,
 				y: 0,
-				duration: 0.7,
+				duration: 0.8,
 				ease: "power3.out",
+				force3D: true,
 				stagger: {
-					amount: 0.5,
+					amount: 0.6,
 					from: "start"
 				},
 				scrollTrigger: {
@@ -182,7 +186,15 @@ function StrategicLayer() {
 		}
 
 		return () => {
-			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+			// Clean up all ScrollTriggers created in this component
+			const triggers = ScrollTrigger.getAll();
+			triggers.forEach(trigger => {
+				if (trigger.trigger === headerRef.current || 
+				    trigger.trigger === sectionRef.current || 
+				    trigger.trigger === cardsContainerRef.current) {
+					trigger.kill();
+				}
+			});
 		};
 	}, []);
 
@@ -263,8 +275,9 @@ function TransformationCard({ item, index }: { item: typeof transformationAreas[
 
 		gsap.to(flipContainerRef.current, {
 			rotateY: isFlipped ? 180 : 0,
-			duration: 0.6,
-			ease: "power2.inOut"
+			duration: 0.65,
+			ease: "power2.inOut",
+			force3D: true
 		});
 	}, [isFlipped]);
 
@@ -275,8 +288,9 @@ function TransformationCard({ item, index }: { item: typeof transformationAreas[
 		if (!prefersReducedMotion) {
 			gsap.to(cardRef.current, {
 				scale: 1.02,
-				duration: 0.3,
-				ease: "power2.out"
+				duration: 0.35,
+				ease: "power2.out",
+				force3D: true
 			});
 		}
 		setIsFlipped(true);
@@ -289,8 +303,9 @@ function TransformationCard({ item, index }: { item: typeof transformationAreas[
 		if (!prefersReducedMotion) {
 			gsap.to(cardRef.current, {
 				scale: 1,
-				duration: 0.3,
-				ease: "power2.out"
+				duration: 0.35,
+				ease: "power2.out",
+				force3D: true
 			});
 		}
 		setIsFlipped(false);
@@ -400,7 +415,7 @@ function TransformationCard({ item, index }: { item: typeof transformationAreas[
 								
 								{/* Success Indicator - Compact */}
 								<div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-primaryYellow/85 mt-auto pt-3 border-t border-primaryYellow/25">
-									<TrendingUp size={12} className="group-hover:translate-y-[-2px] transition-transform duration-300" />
+									<Activity size={12} className="group-hover:translate-y-[-2px] transition-transform duration-300" />
 									<span className="font-NeueMontreal">Transformation achieved</span>
 								</div>
 							</div>

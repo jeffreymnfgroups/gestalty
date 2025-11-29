@@ -13,9 +13,7 @@ export default function FeaturesHero() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					className="max-w-5xl">
-					<div className="flex justify-center mb-6">
-						<Sparkles size={48} className="text-primaryYellow" />
-					</div>
+					
 					<h1 className="heading font-bold font-FoundersGrotesk text-darkBlue mb-6">
 						Gestalty – Empower Your Learning with Real-Time Analytics
 					</h1>

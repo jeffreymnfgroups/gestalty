@@ -32,26 +32,26 @@ const teamCategories = [
 
 export default function AboutTeam() {
 	return (
-		<section className="w-full bg-offWhite padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
-			<div className="max-w-[1600px] mx-auto padding-x">
+		<section className="w-full bg-white py-20 lg:py-28 border-t-2 border-darkBlue/10 rounded-t-[20px] z-20 relative mt-[-15px]">
+			<div className="max-w-[1600px] mx-auto px-8 lg:px-16">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
 					className="mb-12 text-center">
-					<h2 className="sub-heading font-bold font-FoundersGrotesk text-darkBlue mb-4">
+					<h2 className="text-4xl lg:text-5xl font-bold font-FoundersGrotesk text-darkBlue mb-6">
 						Our Team — The Minds Behind Gestalty
 					</h2>
-					<h3 className="text-3xl font-bold font-FoundersGrotesk text-darkBlue mb-6">
+					<h3 className="text-3xl lg:text-4xl font-bold font-FoundersGrotesk text-darkBlue mb-8">
 						A Multidisciplinary Powerhouse
 					</h3>
-					<p className="paragraph text-grayBlue max-w-3xl mx-auto mb-8">
+					<p className="text-lg lg:text-xl text-grayBlue max-w-4xl mx-auto mb-16">
 						We are a diverse group of experts united by a common mission:
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 gap-6 mb-12">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 gap-8 lg:gap-10 mb-12">
 					{teamCategories.map((category, index) => {
 						const Icon = category.icon;
 						return (
@@ -61,15 +61,14 @@ export default function AboutTeam() {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.5, delay: index * 0.1 }}
-								whileHover={{ y: -5, scale: 1.02 }}
-								className="science-card p-6 rounded-xl text-center">
-								<div className="mb-4 flex justify-center">
-									<Icon size={40} className="text-primaryYellow" />
+								className="bg-lightBeige border-2 border-primaryYellow/40 rounded-2xl p-8 text-center shadow-sm hover:border-primaryYellow hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+								<div className="mb-5 flex justify-center">
+									<Icon className="w-14 h-14 text-primaryYellow mx-auto" />
 								</div>
-								<h3 className="text-lg font-semibold font-FoundersGrotesk text-darkBlue mb-2">
+								<h3 className="text-xl lg:text-2xl font-semibold font-FoundersGrotesk text-darkBlue mb-3">
 									{category.title}
 								</h3>
-								<p className="small-text text-grayBlue">
+								<p className="text-base lg:text-lg text-grayBlue leading-relaxed">
 									{category.description}
 								</p>
 							</motion.div>
@@ -82,14 +81,14 @@ export default function AboutTeam() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="max-w-4xl mx-auto bg-darkBlue/5 border-l-4 border-primaryYellow p-8 rounded-r-xl">
+					className="max-w-4xl mx-auto bg-lightBeige border-l-4 border-primaryYellow p-10 rounded-r-2xl">
 					<div className="flex items-start gap-4">
-						<Quote size={32} className="text-primaryYellow flex-shrink-0 mt-1" />
+						<Quote className="w-12 h-12 text-primaryYellow flex-shrink-0 mt-1" />
 						<div>
-							<h3 className="text-2xl font-bold font-FoundersGrotesk text-darkBlue mb-4">
+							<h3 className="text-3xl font-bold font-FoundersGrotesk text-darkBlue mb-5">
 								Our Unifying Belief
 							</h3>
-							<p className="paragraph text-grayBlue italic text-lg">
+							<p className="text-xl lg:text-2xl text-grayBlue italic leading-relaxed">
 								"Every learner deserves a system that makes their mind stronger, not just their notes longer."
 							</p>
 						</div>

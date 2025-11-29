@@ -30,7 +30,7 @@ export default function TrustBar() {
 				<div className="max-w-[1600px] mx-auto">
 					{/* Trust Text */}
 					<motion.div
-						style={{ opacity, y }}
+						style={{ opacity, y, willChange: "transform, opacity" }}
 						className="text-center mb-8 sm:mb-10 lg:mb-12">
 						<motion.p
 							initial={{ opacity: 0, y: 20 }}
@@ -61,11 +61,12 @@ export default function TrustBar() {
 									x: ["0%", "-50%"],
 								}}
 								transition={{
-									duration: 30,
+									duration: 32,
 									repeat: Infinity,
 									ease: "linear",
 									repeatType: "loop",
-								}}>
+								}}
+								style={{ willChange: "transform" }}>
 								{/* Render logos twice for seamless infinite loop */}
 								{Array.from({ length: 2 }).map((_, setIndex) => (
 									<div key={`set-${setIndex}`} className="flex gap-8 sm:gap-12 lg:gap-16 items-center flex-shrink-0">

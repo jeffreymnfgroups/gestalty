@@ -110,3 +110,11 @@ export { default as DailyRoutine } from './how-it-works-page/DailyRoutine';
 export { default as WhyChooseGestalty } from './how-it-works-page/WhyChooseGestalty';
 export { default as ProvenOutcomes } from './how-it-works-page/ProvenOutcomes';
 export { default as GetStarted } from './how-it-works-page/GetStarted';
+
+// blog page
+export { default as BlogHero } from './blog-page/BlogHero';
+export { default as BlogFeatured } from './blog-page/BlogFeatured';
+export { default as BlogGrid } from './blog-page/BlogGrid';
+export { default as BlogCategories } from './blog-page/BlogCategories';
+export { default as BlogFilters } from './blog-page/BlogFilters';
+export { default as BlogNewsletter } from './blog-page/BlogNewsletter';

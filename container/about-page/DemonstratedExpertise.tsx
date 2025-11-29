@@ -32,26 +32,26 @@ const disciplines = [
 
 export default function DemonstratedExpertise() {
 	return (
-		<section className="w-full bg-offWhite padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
-			<div className="max-w-[1600px] mx-auto padding-x">
+		<section className="w-full bg-offWhite py-20 lg:py-28 rounded-t-[20px] z-20 relative mt-[-15px]">
+			<div className="max-w-[1600px] mx-auto px-8 lg:px-16">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
 					className="mb-12 text-center">
-					<h2 className="sub-heading font-bold font-FoundersGrotesk text-darkBlue mb-4">
+					<h2 className="text-4xl lg:text-5xl font-bold font-FoundersGrotesk text-darkBlue mb-6">
 						Demonstrated Expertise & Credibility
 					</h2>
-					<h3 className="text-3xl font-bold font-FoundersGrotesk text-darkBlue mb-6">
+					<h3 className="text-3xl lg:text-4xl font-bold font-FoundersGrotesk text-darkBlue mb-8">
 						The Intelligence Behind Gestalty
 					</h3>
-					<p className="paragraph text-grayBlue max-w-3xl mx-auto">
+					<p className="text-lg lg:text-xl text-grayBlue max-w-4xl mx-auto mb-16">
 						Gestalty integrates multiple disciplines into one cohesive system:
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-8 lg:gap-10">
 					{disciplines.map((discipline, index) => {
 						const Icon = discipline.icon;
 						return (
@@ -61,18 +61,16 @@ export default function DemonstratedExpertise() {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.5, delay: index * 0.1 }}
-								whileHover={{ y: -5, scale: 1.02 }}
-								className="science-card p-6 rounded-xl">
-								<div className="mb-4">
+								className="bg-white border-2 border-darkBlue/10 rounded-2xl p-10 shadow-sm hover:border-primaryYellow hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+								<div className="mb-6">
 									<Icon
-										size={40}
-										className="text-primaryYellow"
+										className="w-14 h-14 text-primaryYellow"
 									/>
 								</div>
-								<h3 className="text-xl font-semibold font-FoundersGrotesk text-darkBlue mb-3">
+								<h3 className="text-2xl lg:text-3xl font-semibold font-FoundersGrotesk text-darkBlue mb-4">
 									{discipline.title}
 								</h3>
-								<p className="paragraph text-grayBlue">
+								<p className="text-lg leading-relaxed text-grayBlue">
 									{discipline.description}
 								</p>
 							</motion.div>

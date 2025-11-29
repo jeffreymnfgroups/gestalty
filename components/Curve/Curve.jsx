@@ -17,6 +17,8 @@ const routes = {
 	"/insights": "Insights",
 	"/case": "Workiz Easy",
 	"/how-it-works": "How It Works",
+	"/blog": "Blog",
+	"/login": "Log In",
 };
 
 const anim = (variants) => {

@@ -31,27 +31,27 @@ const phases = [
 
 export default function CompanyEvolution() {
 	return (
-		<section className="w-full bg-darkBlue padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
-			<div className="max-w-[1600px] mx-auto padding-x">
+		<section className="w-full bg-darkBlue py-20 lg:py-28 rounded-t-[20px] z-20 relative mt-[-15px]">
+			<div className="max-w-[1600px] mx-auto px-8 lg:px-16">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
 					className="mb-12 text-center">
-					<h2 className="sub-heading font-bold font-FoundersGrotesk text-offWhite mb-4">
+					<h2 className="text-4xl lg:text-5xl font-bold font-FoundersGrotesk text-offWhite mb-6">
 						Company Evolution & Milestones
 					</h2>
-					<h3 className="text-3xl font-bold font-FoundersGrotesk text-offWhite mb-6">
+					<h3 className="text-3xl lg:text-4xl font-bold font-FoundersGrotesk text-offWhite mb-12">
 						The Journey to Excellence
 					</h3>
 				</motion.div>
 
 				<div className="relative">
 					{/* Timeline line */}
-					<div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primaryYellow/30 hidden md:block" />
+					<div className="absolute left-8 lg:left-10 top-0 bottom-0 w-1 bg-primaryYellow/50 hidden md:block" />
 
-					<div className="space-y-12">
+					<div className="space-y-16">
 						{phases.map((phase, index) => {
 							const Icon = phase.icon;
 							return (
@@ -61,37 +61,37 @@ export default function CompanyEvolution() {
 									whileInView={{ opacity: 1, x: 0 }}
 									viewport={{ once: true }}
 									transition={{ duration: 0.6, delay: index * 0.2 }}
-									className="relative flex gap-8 items-start">
+									className="relative flex gap-8 lg:gap-10 items-start">
 									{/* Timeline dot */}
-									<div className="hidden md:flex flex-shrink-0 w-16 h-16 items-center justify-center">
-										<div className="w-16 h-16 rounded-full bg-primaryYellow/20 border-4 border-primaryYellow flex items-center justify-center z-10">
-											<Icon size={24} className="text-primaryYellow" />
+									<div className="hidden md:flex flex-shrink-0 w-20 h-20 items-center justify-center">
+										<div className="w-20 h-20 rounded-full bg-darkBlue border-4 border-primaryYellow flex items-center justify-center z-10">
+											<Icon className="w-10 h-10 text-primaryYellow" />
 										</div>
 									</div>
 
-									<div className="flex-1 bg-offWhite/5 backdrop-blur-sm border border-primaryYellow/20 rounded-xl p-8 hover:border-primaryYellow/50 transition-all duration-300">
+									<div className="flex-1 bg-white/10 border-2 border-primaryYellow/30 rounded-2xl p-12 hover:border-primaryYellow hover:bg-white/15 transition-all duration-300">
 										<div className="flex items-center gap-4 mb-4 md:hidden">
-											<div className="w-12 h-12 rounded-full bg-primaryYellow/20 border-2 border-primaryYellow flex items-center justify-center">
-												<Icon size={20} className="text-primaryYellow" />
+											<div className="w-14 h-14 rounded-full bg-darkBlue border-3 border-primaryYellow flex items-center justify-center">
+												<Icon className="w-7 h-7 text-primaryYellow" />
 											</div>
 											<div>
-												<h3 className="text-2xl font-bold font-FoundersGrotesk text-offWhite">
+												<h3 className="text-2xl lg:text-3xl font-bold font-FoundersGrotesk text-offWhite">
 													{phase.phase}
 												</h3>
-												<p className="paragraph text-primaryYellow font-semibold">
+												<p className="text-xl text-primaryYellow font-semibold">
 													{phase.duration}
 												</p>
 											</div>
 										</div>
-										<div className="hidden md:block mb-4">
-											<h3 className="text-2xl font-bold font-FoundersGrotesk text-offWhite mb-2">
+										<div className="hidden md:block mb-6">
+											<h3 className="text-2xl lg:text-3xl font-bold font-FoundersGrotesk text-offWhite mb-3">
 												{phase.phase}
 											</h3>
-											<p className="paragraph text-primaryYellow font-semibold">
+											<p className="text-xl text-primaryYellow font-semibold">
 												{phase.duration}
 											</p>
 										</div>
-										<p className="paragraph text-offWhite/80 whitespace-pre-line">
+										<p className="text-lg lg:text-xl text-offWhite/80 leading-relaxed whitespace-pre-line">
 											{phase.description}
 										</p>
 									</div>

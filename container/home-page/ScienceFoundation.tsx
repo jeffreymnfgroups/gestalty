@@ -85,6 +85,7 @@ const StackedCard = ({
 				y,
 				opacity,
 				zIndex: index + 1,
+				willChange: "transform, opacity"
 			}}
 			className="sticky top-24 sm:top-32 md:top-40"
 		>
@@ -155,7 +156,8 @@ const PillarCard = ({ pillar }: { pillar: typeof pillars[0] }) => {
 							alt={pillar.title}
 							fill
 							className="object-cover opacity-100 mix-blend-multiply"
-							priority={pillar.number <= 2}
+							priority={pillar.number === 1}
+							loading={pillar.number === 1 ? "eager" : "lazy"}
 						/>
 					</div>
 				</div>

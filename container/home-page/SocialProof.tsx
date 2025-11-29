@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Quote, TrendingUp, Target, Sparkles } from "lucide-react";
+import { Quote, LineChart, Gauge, Sparkles } from "lucide-react";
 
 const pullQuote = "Consistency is more powerful than intensity.";
 
@@ -39,8 +39,9 @@ export default function SocialProof() {
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-50px" }}
-					transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-					className="mb-20 sm:mb-24 lg:mb-28">
+					transition={{ duration: 0.75, ease: [0.33, 1, 0.68, 1] }}
+					className="mb-20 sm:mb-24 lg:mb-28"
+					style={{ willChange: "transform, opacity" }}>
 					<div className="relative group">
 						{/* Main Card */}
 						<div 
@@ -76,8 +77,9 @@ export default function SocialProof() {
 									initial={{ opacity: 0, scale: 0.95 }}
 									whileInView={{ opacity: 1, scale: 1 }}
 									viewport={{ once: true }}
-									transition={{ duration: 0.6, delay: 0.2 }}
-									className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue leading-[1.15] italic max-w-5xl mx-auto tracking-[-0.02em]">
+									transition={{ duration: 0.7, delay: 0.25 }}
+									className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue leading-[1.15] italic max-w-5xl mx-auto tracking-[-0.02em]"
+									style={{ willChange: "transform, opacity" }}>
 									"{pullQuote}"
 								</motion.p>
 							</div>
@@ -93,8 +95,9 @@ export default function SocialProof() {
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-50px" }}
-					transition={{ duration: 0.8, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
-					className="mb-20 sm:mb-24 lg:mb-28">
+					transition={{ duration: 0.8, delay: 0.15, ease: [0.33, 1, 0.68, 1] }}
+					className="mb-20 sm:mb-24 lg:mb-28"
+					style={{ willChange: "transform, opacity" }}>
 					<div 
 						className="bg-offWhite rounded-2xl sm:rounded-3xl overflow-hidden border border-darkBlue/10 transition-all duration-300 hover:shadow-2xl"
 						style={{
@@ -107,7 +110,7 @@ export default function SocialProof() {
 								<div className="p-6 sm:p-8 lg:p-10 border-b border-darkBlue/10 bg-gradient-to-br from-grayBlue/5 to-transparent">
 									<div className="flex items-center gap-3">
 										<div className="p-2.5 rounded-xl bg-grayBlue/10 border border-grayBlue/20">
-											<Target size={24} className="text-grayBlue" />
+											<Gauge size={24} className="text-grayBlue" />
 										</div>
 										<h3 className="text-lg sm:text-xl lg:text-2xl font-semibold font-FoundersGrotesk text-darkBlue tracking-tight">
 											Traditional Method
@@ -123,8 +126,9 @@ export default function SocialProof() {
 											initial={{ opacity: 0, x: -20 }}
 											whileInView={{ opacity: 1, x: 0 }}
 											viewport={{ once: true }}
-											transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-											className="space-y-4">
+											transition={{ duration: 0.65, delay: 0.35 + index * 0.1 }}
+											className="space-y-4"
+											style={{ willChange: "transform, opacity" }}>
 											<div>
 												<p className="paragraph font-semibold font-NeueMontreal text-grayBlue mb-2 leading-relaxed">
 													{row.traditional.description}
@@ -155,7 +159,7 @@ export default function SocialProof() {
 									<div className="absolute top-0 right-0 w-32 h-32 bg-primaryYellow/10 rounded-full blur-3xl" />
 									<div className="flex items-center gap-3 relative z-10">
 										<div className="p-2.5 rounded-xl bg-primaryYellow/20 border border-primaryYellow/40 shadow-lg">
-											<TrendingUp size={24} className="text-primaryYellow" />
+											<LineChart size={24} className="text-primaryYellow" />
 										</div>
 										<h3 className="text-lg sm:text-xl lg:text-2xl font-semibold font-FoundersGrotesk text-darkBlue tracking-tight">
 											Gestalty
@@ -171,8 +175,9 @@ export default function SocialProof() {
 											initial={{ opacity: 0, x: 20 }}
 											whileInView={{ opacity: 1, x: 0 }}
 											viewport={{ once: true }}
-											transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-											className="space-y-4">
+											transition={{ duration: 0.65, delay: 0.35 + index * 0.1 }}
+											className="space-y-4"
+											style={{ willChange: "transform, opacity" }}>
 											<div>
 												<p className="paragraph font-semibold font-NeueMontreal text-darkBlue mb-2 leading-relaxed">
 													{row.gestalty.description}
@@ -204,8 +209,9 @@ export default function SocialProof() {
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-50px" }}
-					transition={{ duration: 0.7, delay: 0.5, ease: [0.33, 1, 0.68, 1] }}
-					className="text-center">
+					transition={{ duration: 0.75, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
+					className="text-center"
+					style={{ willChange: "transform, opacity" }}>
 					<div 
 						className="relative inline-block max-w-4xl mx-auto bg-gradient-to-br from-offWhite via-offWhite/95 to-offWhite/90 backdrop-blur-md rounded-2xl sm:rounded-3xl p-10 sm:p-12 lg:p-16 border border-primaryYellow/30 transition-all duration-300 hover:shadow-xl hover:border-primaryYellow/50 group"
 						style={{
@@ -224,8 +230,9 @@ export default function SocialProof() {
 								initial={{ scale: 0.9, opacity: 0 }}
 								whileInView={{ scale: 1, opacity: 1 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: 0.6 }}
-								className="mb-6">
+								transition={{ duration: 0.55, delay: 0.55 }}
+								className="mb-6"
+								style={{ willChange: "transform, opacity" }}>
 								<Quote
 									size={40}
 									className="text-primaryYellow/50 mx-auto"

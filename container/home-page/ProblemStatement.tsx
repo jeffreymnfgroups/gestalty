@@ -164,15 +164,17 @@ export default function ProblemStatement() {
 						initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true, margin: "-100px" }}
-						transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
-						className="text-center mb-12 sm:mb-16 lg:mb-20">
+						transition={{ duration: 0.65, ease: [0.33, 1, 0.68, 1] }}
+						className="text-center mb-12 sm:mb-16 lg:mb-20"
+						style={{ willChange: "transform, opacity" }}>
 						{/* Headline */}
 						<motion.h2
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.1 }}
-							className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue tracking-[-0.02em] leading-[1.1] mb-4 sm:mb-6">
+							transition={{ duration: 0.65, delay: 0.12 }}
+							className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue tracking-[-0.02em] leading-[1.1] mb-4 sm:mb-6"
+							style={{ willChange: "transform, opacity" }}>
 							Why Traditional Preparation Fails
 						</motion.h2>
 
@@ -181,8 +183,9 @@ export default function ProblemStatement() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
-							className="paragraph font-medium font-NeueMontreal text-darkBlue/80 max-w-4xl mx-auto">
+							transition={{ duration: 0.65, delay: 0.22, ease: [0.33, 1, 0.68, 1] }}
+							className="paragraph font-medium font-NeueMontreal text-darkBlue/80 max-w-4xl mx-auto"
+							style={{ willChange: "transform, opacity" }}>
 							Most aspirants struggle not from lack of effort, but from fighting invisible cognitive barriers that traditional methods can't address.
 						</motion.p>
 					</motion.div>
@@ -192,15 +195,17 @@ export default function ProblemStatement() {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true, margin: "-50px" }}
-						transition={{ duration: 0.6, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
-						className="mb-12 sm:mb-16">
+						transition={{ duration: 0.65, delay: 0.28, ease: [0.33, 1, 0.68, 1] }}
+						className="mb-12 sm:mb-16"
+						style={{ willChange: "opacity" }}>
 						{/* Section Title with Navigation Buttons */}
 						<motion.div
 							initial={{ opacity: 0, x: -20 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
-							className="mb-8 sm:mb-10 lg:mb-12 flex items-center justify-between">
+							transition={{ duration: 0.65, delay: 0.35, ease: [0.33, 1, 0.68, 1] }}
+							className="mb-8 sm:mb-10 lg:mb-12 flex items-center justify-between"
+							style={{ willChange: "transform, opacity" }}>
 							<div>
 								<h3 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold font-FoundersGrotesk text-darkBlue mb-2">
 									Cognitive Biases Aspirants Face
@@ -243,13 +248,15 @@ export default function ProblemStatement() {
 											whileInView={{ opacity: 1, y: 0 }}
 											viewport={{ once: true, margin: "-50px" }}
 											transition={{
-												duration: 0.5,
-												delay: 0.1 * index,
+												duration: 0.55,
+												delay: 0.09 * index,
 												ease: [0.33, 1, 0.68, 1]
 											}}
-											className="group relative flex-shrink-0">
+											className="group relative flex-shrink-0"
+											style={{ willChange: "transform, opacity" }}>
 											{/* Card Container - Portrait */}
-											<div className="science-card relative flex h-[28rem] w-80 flex-shrink-0 flex-col items-start justify-end overflow-hidden rounded-3xl bg-beige/20 md:h-[42rem] md:w-96 hover:scale-[1.02] transition-all duration-300">
+											<div className="science-card relative flex h-[28rem] w-80 flex-shrink-0 flex-col items-start justify-end overflow-hidden rounded-3xl bg-beige/20 md:h-[42rem] md:w-96 hover:scale-[1.02] transition-all duration-300"
+												style={{ willChange: "transform" }}>
 												{/* Background Image */}
 												<Image
 													src={bias.src}
@@ -257,20 +264,21 @@ export default function ProblemStatement() {
 													fill
 													className="absolute inset-0 z-10 object-cover transition-transform duration-300 group-hover:scale-105"
 													unoptimized={true}
+													loading={index < 3 ? "eager" : "lazy"}
 												/>
 
 												{/* Primary Gradient Overlay */}
 												<div className="absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-darkBlue/70 via-darkBlue/30 to-darkBlue/10 pointer-events-none transition-opacity duration-300 group-hover:from-darkBlue/80" />
 
-												{/* Content Overlay - Hidden by default, visible on hover */}
-												<div className="relative z-40 p-6 bg-gradient-to-b from-darkBlue/30 via-darkBlue/10 to-transparent rounded-b-3xl w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-													<h3 className="text-left font-FoundersGrotesk text-lg md:text-xl font-semibold [text-wrap:balance] text-offWhite drop-shadow-lg">
-														{bias.name}
-													</h3>
-													<p className="mt-2 text-left font-NeueMontreal text-xs md:text-sm font-medium text-offWhite/90 drop-shadow-lg">
-														{bias.description}
-													</p>
-												</div>
+								{/* Content Overlay */}
+								<div className="relative z-40 p-6 bg-gradient-to-b from-darkBlue/50 via-darkBlue/30 to-darkBlue/10 rounded-b-3xl w-full transition-all duration-300 group-hover:from-darkBlue/60">
+									<h3 className="text-left font-FoundersGrotesk text-lg md:text-xl font-semibold [text-wrap:balance] text-offWhite drop-shadow-lg">
+										{bias.name}
+									</h3>
+									<p className="mt-2 text-left font-NeueMontreal text-xs md:text-sm font-medium text-offWhite/90 drop-shadow-lg">
+										{bias.description}
+									</p>
+								</div>
 											</div>
 										</motion.div>
 									);
@@ -284,8 +292,9 @@ export default function ProblemStatement() {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
-						transition={{ duration: 0.6, delay: 0.8, ease: [0.33, 1, 0.68, 1] }}
-						className="mt-8 sm:mt-10 lg:mt-12 text-center">
+						transition={{ duration: 0.65, delay: 0.7, ease: [0.33, 1, 0.68, 1] }}
+						className="mt-8 sm:mt-10 lg:mt-12 text-center"
+						style={{ willChange: "transform, opacity" }}>
 						<div className="relative inline-block max-w-2xl mx-auto">
 							{/* Main Card */}
 							<div className="relative science-card p-6 sm:p-8 lg:p-10 rounded-3xl bg-lightBeige border border-grayBlue/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
