@@ -1,174 +1,254 @@
 "use client";
 import { motion } from "framer-motion";
-import { CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
+
+// White filter for all icons
+const whiteIconFilter = "brightness(0) saturate(100%) invert(100%)";
+
+// Get icon container background color that complements beige (#dbd6cc)
+const getIconBgColor = (color: string) => {
+	const colorMap: { [key: string]: string } = {
+		red: "#8B5A5A",      // Warm burgundy that complements beige
+		orange: "#9B7A4A",   // Warm brown-orange
+		yellow: "#8B7D5A",   // Olive brown
+		amber: "#7A6B4A",    // Deep amber brown
+		green: "#5A7A6B",    // Deep teal-green
+	};
+	return colorMap[color] || colorMap.yellow;
+};
 
 const solutions = [
 	{
 		problem: "Inadequate Study Planning",
 		impact: "Underestimating syllabus size leads to rushed coverage and cramming",
 		solution: "Split Syllabus Engine: Breaks down syllabi into daily/weekly custom chunks",
-		problemGradient: "from-red-500/20 to-orange-500/10",
-		problemBorder: "border-red-500/30",
-		problemIcon: "text-red-500",
+		color: "red",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/calendar-days.svg",
 	},
 	{
 		problem: "Lack of Focus & Consistency",
 		impact: "Distractions and procrastination cause inconsistent study, leading to knowledge gaps, lower retention, and reduced productivity.",
 		solution: "Progress Tracking: Real-time stage-wise analytics pinpoint your journey",
-		problemGradient: "from-orange-500/20 to-yellow-500/10",
-		problemBorder: "border-orange-500/30",
-		problemIcon: "text-orange-500",
+		color: "orange",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/chart-bar.svg",
 	},
 	{
 		problem: "Weak Study Techniques & Retention",
 		impact: "Passive learning leads to surface-level understanding and weak problem-solving",
 		solution: "Strategic Revision Reminders: Scheduled by proven spaced-repetition models for maximum retention",
-		problemGradient: "from-yellow-500/20 to-amber-500/10",
-		problemBorder: "border-yellow-500/30",
-		problemIcon: "text-yellow-500",
+		color: "yellow",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/light-bulb.svg",
 	},
 	{
 		problem: "Fragmented & Unsystematic Learning",
 		impact: "Fragmentation disrupts focused, organized, and efficient learning.",
 		solution: "Consistency Mapping: Visual charts and heatmaps reveal time, effort, and deviations",
-		problemGradient: "from-amber-500/20 to-primaryYellow/10",
-		problemBorder: "border-amber-500/30",
-		problemIcon: "text-amber-500",
+		color: "amber",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/puzzle-piece.svg",
 	},
 	{
 		problem: "Misalignment Between Effort & Outcomes",
 		impact: "Wasted effort results in slow improvement and discouraging outcomes",
 		solution: "AI Feedback Loop: Statistical tools calibrate effort with actual outcomes",
-		problemGradient: "from-primaryYellow/20 to-lime-500/10",
-		problemBorder: "border-primaryYellow/30",
-		problemIcon: "text-primaryYellow",
+		color: "yellow",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/arrow-trending-up.svg",
 	},
 	{
 		problem: "Mental Health & Motivation Issues",
 		impact: "Anxiety, burnout, and low motivation harm results",
 		solution: "Cognitive Inertia Detector: ML algorithms spot resistance early and keep you on track",
-		problemGradient: "from-lime-500/20 to-green-500/10",
-		problemBorder: "border-lime-500/30",
-		problemIcon: "text-lime-500",
+		color: "green",
+		iconUrl: "https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/heart.svg",
 	},
 ];
 
 export default function FeaturesPreview() {
+
 	return (
-		<section className="w-full bg-offWhite padding-y rounded-t-[20px] z-20 relative">
-			<div className="max-w-[1600px] mx-auto padding-x">
+		<section
+			className="w-full bg-offWhite padding-y rounded-t-[20px] z-20 relative overflow-hidden"
+			style={{
+				background: "linear-gradient(135deg, #fefefe 0%, #f5f5f0 50%, #fefefe 100%)",
+				backgroundSize: "200% 200%",
+			}}>
+			{/* Background Layers */}
+			<div
+				className="absolute inset-0 opacity-30 pointer-events-none"
+				style={{
+					background: "radial-gradient(circle at 20% 30%, rgba(251, 193, 13, 0.15) 0%, transparent 50%)",
+				}}
+			/>
+			<div
+				className="absolute inset-0 opacity-20 pointer-events-none"
+				style={{
+					background: "radial-gradient(circle at 80% 70%, rgba(106, 113, 136, 0.1) 0%, transparent 50%)",
+				}}
+			/>
+			<div
+				className="absolute inset-0 opacity-15 pointer-events-none"
+				style={{
+					background: "radial-gradient(circle at 50% 50%, rgba(216, 209, 178, 0.12) 0%, transparent 60%)",
+				}}
+			/>
+
+			{/* Floating Geometric Shapes */}
+			<div className="absolute inset-0 pointer-events-none overflow-hidden">
+				<div
+					className="absolute w-32 h-32 rounded-full bg-primaryYellow/10 blur-xl"
+					style={{ top: "10%", left: "5%" }}
+				/>
+				<div
+					className="absolute w-24 h-24 rounded-lg bg-darkBlue/5 blur-lg rotate-45"
+					style={{ top: "60%", right: "10%" }}
+				/>
+				<div
+					className="absolute w-40 h-40 rounded-full bg-grayBlue/8 blur-2xl"
+					style={{ bottom: "20%", left: "15%" }}
+				/>
+				<div
+					className="absolute w-20 h-20 rounded-lg bg-primaryYellow/8 blur-md rotate-12"
+					style={{ top: "30%", right: "20%" }}
+				/>
+				<div
+					className="absolute w-36 h-36 rounded-full bg-darkBlue/6 blur-xl"
+					style={{ bottom: "40%", right: "5%" }}
+				/>
+			</div>
+
+			<div className="max-w-[1600px] mx-auto padding-x relative z-10">
 				{/* Header Section */}
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: "-100px" }}
+					transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+					className="mb-16 md:mb-20 text-center">
+					<motion.h2
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.1 }}
+						className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue mb-4 tracking-[-0.02em] leading-[1.1]">
+						The Gestalty Difference: From Guesswork to Precision
+					</motion.h2>
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
+						className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-medium font-NeueMontreal text-grayBlue max-w-3xl mx-auto leading-[1.6]">
+						Experience the transformation from chaotic learning to structured, science-driven preparation.
+					</motion.p>
+				</motion.div>
+
+				{/* Sub-header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ duration: 0.6 }}
+					transition={{ duration: 0.6, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
 					className="mb-12 text-center">
-					<h2 className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[64px] xl:text-[72px] font-bold font-FoundersGrotesk text-darkBlue mb-4 tracking-[-0.02em] leading-[1.1]">
-						The Gestalty Difference: From Guesswork to Precision
-					</h2>
-					<p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-medium font-NeueMontreal text-grayBlue max-w-3xl mx-auto leading-[1.6]">
-						Experience the transformation from chaotic learning to structured, science-driven preparation.
+					<h3 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold font-FoundersGrotesk text-darkBlue mb-2">
+						The Problems We Solve — From Chaos to Clarity
+					</h3>
+					<p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium font-NeueMontreal text-primaryYellow italic">
+						Mapping Aspirants' Challenges, Consequences, and Tailored Gestalty Solutions
 					</p>
 				</motion.div>
 
-				{/* Diagnostic Lens Section */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6, delay: 0.2 }}
-					className="mb-12">
-					<div className="mb-8 text-center">
-						<h3 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold font-FoundersGrotesk text-darkBlue mb-2">
-							The Problems We Solve — From Chaos to Clarity
-						</h3>
-						<p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium font-NeueMontreal text-primaryYellow italic">
-							Mapping Aspirants' Challenges, Consequences, and Tailored Gestalty Solutions
-						</p>
-					</div>
-
-					{/* Clean Comparison Table - All Devices */}
-					<div className="overflow-x-auto rounded-xl shadow-lg">
+				{/* Cards Container */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+					{solutions.map((item, index) => (
 						<motion.div
-							initial={{ opacity: 0, y: 20 }}
+							key={index}
+							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.2 }}>
-							<table className="w-full border-collapse bg-white rounded-lg overflow-hidden" style={{ minWidth: '750px' }}>
-								<thead>
-									<tr>
-										{/* Problem Header */}
-										<th className="px-6 py-4 bg-gray-50 border-b-2 border-gray-300 text-left">
-											<div className="flex items-center gap-2">
-												<AlertCircle size={18} className="text-gray-700 flex-shrink-0" />
-												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
-													Problem
-												</span>
-											</div>
-										</th>
-										{/* Impact Header */}
-										<th className="px-6 py-4 bg-gray-50 border-b-2 border-gray-300 text-left">
-											<div className="flex items-center gap-2">
-												<ArrowRight size={18} className="text-gray-700 flex-shrink-0" />
-												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
-													Impact
-												</span>
-											</div>
-										</th>
-										{/* Solution Header - Highlighted */}
-										<th className="px-6 py-4 bg-green-50 border-b-2 border-green-300 text-left">
-											<div className="flex items-center gap-2">
-												<CheckCircle2 size={18} className="text-green-600 flex-shrink-0" />
-												<span className="text-sm lg:text-base xl:text-lg font-bold font-FoundersGrotesk text-darkBlue uppercase tracking-wide">
-													Gestalty Solution
-												</span>
-											</div>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									{solutions.map((item, index) => (
-										<motion.tr
-											key={index}
-											initial={{ opacity: 0, y: 10 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											viewport={{ once: true, margin: "-50px" }}
-											transition={{ 
-												duration: 0.4, 
-												delay: index * 0.05,
-												ease: [0.33, 1, 0.68, 1]
-											}}
-											className={`border-b border-gray-200 transition-colors duration-200 hover:bg-gray-50/70 ${
-												index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
-											}`}>
-											{/* Problem Cell */}
-											<td className="px-6 py-4 align-top" style={{ minWidth: '220px' }}>
-												<div className="text-sm lg:text-base xl:text-lg font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
-													{item.problem}
-												</div>
-											</td>
-											{/* Impact Cell */}
-											<td className="px-6 py-4 align-top" style={{ minWidth: '250px' }}>
-												<div className="text-sm lg:text-base xl:text-lg font-NeueMontreal text-grayBlue leading-relaxed">
-													{item.impact}
-												</div>
-											</td>
-											{/* Solution Cell - Highlighted */}
-											<td className="px-6 py-4 align-top bg-green-50/60" style={{ minWidth: '280px' }}>
-												<div className="text-sm lg:text-base xl:text-lg font-semibold font-FoundersGrotesk text-darkBlue leading-relaxed">
-													{item.solution}
-												</div>
-											</td>
-										</motion.tr>
-									))}
-								</tbody>
-							</table>
+							viewport={{ once: true, margin: "-50px" }}
+							transition={{
+								duration: 0.5,
+								delay: 0.1 * index,
+								ease: [0.33, 1, 0.68, 1]
+							}}
+							className="group relative">
+							{/* Card */}
+							<div
+								className="relative h-full rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+								style={{
+									backgroundColor: "#dbd6cc",
+									boxShadow: "0 10px 40px rgba(0, 0, 0, 0.08)",
+								}}>
+								{/* Problem Section */}
+								<div className="mb-6">
+									<div className="flex items-start gap-3 mb-3">
+										<div 
+											className="p-2 rounded-full flex items-center justify-center w-10 h-10 flex-shrink-0"
+											style={{ backgroundColor: getIconBgColor(item.color) }}
+										>
+											<img
+												src={item.iconUrl}
+												alt="Problem Icon"
+												className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+												style={{ filter: whiteIconFilter }}
+											/>
+										</div>
+										<h4 className="text-xl md:text-2xl font-bold font-FoundersGrotesk text-darkBlue flex-1 leading-[1.3]">
+											{item.problem}
+										</h4>
+									</div>
+								</div>
+
+								{/* Impact Section */}
+								<div className="mb-6 relative">
+									<div className="flex items-center gap-2 mb-3">
+										<div 
+											className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+											style={{ backgroundColor: "#6a7188" }}
+										>
+											<img
+												src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/arrow-trending-down.svg"
+												alt="Impact"
+												className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+												style={{ filter: whiteIconFilter }}
+											/>
+										</div>
+										<span className="text-sm uppercase tracking-wider font-semibold font-FoundersGrotesk text-darkBlue">
+											Impact
+										</span>
+									</div>
+									<p className="text-base md:text-lg font-NeueMontreal text-darkBlue/90 leading-[1.7] pl-6">
+										{item.impact}
+									</p>
+								</div>
+
+								{/* Solution Section - Highlighted */}
+								<div className="relative pt-6 border-t" style={{ borderColor: "rgba(106, 113, 136, 0.2)" }}>
+									<div className="flex items-start gap-3">
+										<div 
+											className="p-2 rounded-full flex items-center justify-center w-10 h-10 flex-shrink-0"
+											style={{ backgroundColor: "#5A7A6B" }}
+										>
+											<img
+												src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/check-circle.svg"
+												alt="Solution"
+												className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+												style={{ filter: whiteIconFilter }}
+											/>
+										</div>
+										<div className="flex-1">
+											<span className="text-sm uppercase tracking-wider font-semibold font-FoundersGrotesk text-darkBlue mb-2 block">
+												Gestalty Solution
+											</span>
+											<p className="text-base md:text-lg font-semibold font-FoundersGrotesk text-darkBlue leading-[1.6]">
+												{item.solution}
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
 						</motion.div>
-					</div>
-				</motion.div>
+					))}
+				</div>
 			</div>
 		</section>
 	);
 }
-

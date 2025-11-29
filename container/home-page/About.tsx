@@ -1,13 +1,6 @@
 "use client";
-import Image from "next/image";
-import { useState } from "react";
-import { aboutImg } from "@/public";
-import { LinkHover } from "@/animation";
-import { footerItems } from "@/constants";
-import { Heading, RoundButton } from "@/components";
 
 export default function About() {
-	const [hovered, setHovered] = useState(false);
 
 	return (
 		<section className="w-full bg-offWhite padding-y relative">
@@ -54,36 +47,6 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div className="w-full flex justify-between padding-x sm:flex-col xm:flex-col gap-[30px]">
-				<div className="flex flex-col gap-[30px]">
-					<Heading title="Our approach:" />
-					<div
-						className="w-fit flex items-center justify-between bg-primaryYellow cursor-pointer rounded-full group"
-						onMouseEnter={() => setHovered(true)}
-						onMouseLeave={() => setHovered(false)}>
-						<RoundButton
-							href="/about"
-							title="learn more"
-							bgcolor="#fbc10d"
-							className="bg-primaryYellow text-darkBlue"
-							style={{ color: "#19254c" }}
-						/>
-					</div>
-				</div>
-				<div
-					className={`w-[50%] sm:w-full xm:w-full transition transform duration-[1.5s] ease-[.215,.61,.355,1] rounded-[15px] overflow-hidden ${
-						hovered && "scale-[0.96]"
-					}`}>
-					<Image
-						src={aboutImg}
-						alt="about-img"
-						className={`w-full h-full transition transform duration-[2s] ease-[.215,.61,.355,1] ${
-							hovered && "scale-[1.09]"
-						}`}
-						placeholder="empty"
-					/>
 				</div>
 			</div>
 		</section>
