@@ -54,10 +54,10 @@ export default function Curve({ children, backgroundColor }) {
 			<div
 				style={{ opacity: dimensions.width == null ? 1 : 0 }}
 				className="fixed h w-full pointer-events-none
-				 left-0 top-0 z-50 bg-black"
+				 left-0 top-0 z-50 bg-[#f5f5dc]"
 			/>
 			<motion.p
-				className="absolute left-1/2 top-[40%] text-white text-[50px] z-[60] -translate-x-1/2 text-center"
+				className="absolute left-1/2 top-[40%] text-zinc-900 text-[52px] font-semibold tracking-tight z-[60] -translate-x-1/2 text-center leading-tight"
 				{...anim(text)}>
 				{routes[router.route]}
 			</motion.p>
@@ -89,7 +89,7 @@ const SVG = ({ height, width }) => {
 			className="fixed h w-full pointer-events-none
 				 left-0 top-0 z-50"
 			{...anim(translate)}>
-			<motion.path {...anim(curve(initialPath, targetPath))} />
+			<motion.path fill="#f5f5dc" {...anim(curve(initialPath, targetPath))} />
 		</motion.svg>
 	);
 };

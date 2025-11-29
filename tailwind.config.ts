@@ -20,6 +20,11 @@ const config: Config = {
         beige: "#d8d1b2",
         dark_black: "#1b1d1e",
         
+        // Academic/Professional Palette
+        academicGold: "#f5b800",
+        deepNavy: "#0f1a35",
+        warmWhite: "#fafaf8",
+        
         // Legacy support (mapped to new colors)
         background: "#fefefe",
         secondry: "#19254c",

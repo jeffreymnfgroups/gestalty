@@ -9,8 +9,7 @@ import {
 	TrendingUp,
 	User,
 	MessageCircle,
-	RotateCcw,
-	Sparkles
+	RotateCcw
 } from "lucide-react";
 
 // Register GSAP plugins
@@ -105,14 +104,13 @@ function StrategicLayer() {
 	const headerRef = useRef<HTMLDivElement>(null);
 	const titleRef = useRef<HTMLHeadingElement>(null);
 	const descriptionRef = useRef<HTMLParagraphElement>(null);
-	const badgeRef = useRef<HTMLDivElement>(null);
 	const sectionRef = useRef<HTMLHeadingElement>(null);
 	const cardsContainerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 		
-		// Header animation with badge
+		// Header animation
 		if (headerRef.current && !prefersReducedMotion) {
 			const headerTimeline = gsap.timeline({
 				scrollTrigger: {
@@ -123,16 +121,6 @@ function StrategicLayer() {
 				}
 			});
 
-			if (badgeRef.current) {
-				gsap.set(badgeRef.current, { opacity: 0, scale: 0.8 });
-				headerTimeline.to(badgeRef.current, {
-					opacity: 1,
-					scale: 1,
-					duration: 0.5,
-					ease: "back.out(1.7)"
-				});
-			}
-
 			if (titleRef.current) {
 				gsap.set(titleRef.current, { opacity: 0, y: 30 });
 				headerTimeline.to(titleRef.current, {
@@ -140,7 +128,7 @@ function StrategicLayer() {
 					y: 0,
 					duration: 0.8,
 					ease: "power3.out"
-				}, "-=0.2");
+				});
 			}
 
 			if (descriptionRef.current) {
@@ -205,31 +193,14 @@ function StrategicLayer() {
 			<div className="absolute inset-0 bg-gradient-to-br from-primaryYellow/5 via-transparent to-darkBlue/5" />
 			
 			<div className="max-w-[1600px] mx-auto padding-x relative z-10">
-				{/* Improved Header with Badge */}
+				{/* Header */}
 				<div ref={headerRef} className="mb-6 sm:mb-8 lg:mb-10">
-					{/* Badge */}
-					<div 
-						ref={badgeRef}
-						className="inline-flex items-center gap-2 px-4 py-2 bg-primaryYellow/10 border border-primaryYellow/30 rounded-full mb-5 sm:mb-6 mx-auto">
-						<Sparkles size={14} className="text-primaryYellow" />
-						<span className="text-xs sm:text-sm font-semibold font-NeueMontreal text-darkBlue uppercase tracking-wide">
-							Strategic Foundation
-						</span>
-					</div>
-
 					{/* Main Title */}
 					<h2 
 						ref={titleRef}
 						className="sub-heading font-bold font-FoundersGrotesk text-darkBlue mb-3 sm:mb-4 leading-tight text-center">
 						Strategic Layer That Anchors Your Learning
 					</h2>
-					
-					{/* Divider */}
-					<div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
-						<div className="h-px w-12 bg-gradient-to-r from-transparent via-primaryYellow to-transparent" />
-						<div className="h-1.5 w-1.5 rounded-full bg-primaryYellow" />
-						<div className="h-px w-12 bg-gradient-to-r from-transparent via-primaryYellow to-transparent" />
-					</div>
 
 					{/* Description */}
 					<p 
@@ -250,7 +221,7 @@ function StrategicLayer() {
 					{/* Flip Cards Grid - Reduced Gaps */}
 					<div 
 						ref={cardsContainerRef}
-						className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-2.5 lg:gap-2 xl:gap-2.5">
+						className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1.5 sm:gap-2 lg:gap-1.5 xl:gap-2">
 						{transformationAreas.map((item, index) => (
 							<TransformationCard key={index} item={item} index={index} />
 						))}
