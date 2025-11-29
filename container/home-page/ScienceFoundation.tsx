@@ -100,7 +100,7 @@ const PillarCard = ({ pillar }: { pillar: typeof pillars[0] }) => {
 
 	return (
 		<div
-			className="relative h-[600px] w-full sm:h-[700px] md:h-[650px] lg:h-[600px] overflow-hidden rounded-3xl"
+			className="relative min-h-[700px] sm:min-h-[750px] md:min-h-[700px] lg:h-[600px] w-full overflow-hidden rounded-3xl"
 			style={{
 				backgroundColor: "#EBEBE6",
 				boxShadow: "0 10px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 0, 0, 0.1)",
@@ -112,7 +112,7 @@ const PillarCard = ({ pillar }: { pillar: typeof pillars[0] }) => {
 			{/* Two Column Layout */}
 			<div className="relative z-10 h-full flex flex-col lg:flex-row items-center">
 				{/* Left Side - Content */}
-				<div className="flex-1 h-full flex flex-col justify-center p-8 sm:p-10 md:p-12 lg:p-14 lg:pr-8">
+				<div className="flex-1 w-full flex flex-col justify-center p-6 sm:p-8 md:p-10 lg:p-14 lg:pr-8 py-10 sm:py-12">
 					{/* Pillar Number Badge and Icon */}
 					<div className="flex items-center gap-4 mb-6 sm:mb-8">
 						<span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primaryYellow flex items-center justify-center text-darkBlue font-bold font-FoundersGrotesk text-2xl sm:text-3xl shadow-lg">
